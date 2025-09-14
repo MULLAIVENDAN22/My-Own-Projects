@@ -169,7 +169,7 @@
                 <div class="col-12 mt-1 usermanagement">
                   <div
                     class="d-flex flex-row align-items-center ps-3 sidebar py-1"
-                    style="color: white; background-color: #494e53; gap: 5%"
+                    style="color: rgb(206, 206, 206); gap: 5%"
                   >
                     <i class="fa-solid fa-users fs-5"></i>
                     <h6 class="fw-medium pt-2" style="font-size: 14px">
@@ -191,7 +191,7 @@
                 <div class="col-12 mt-1 item">
                   <div
                     class="d-flex flex-row align-items-center ps-3 sidebar py-1"
-                    style="color: rgb(206, 206, 206); gap: 5%"
+                    style="color: white; background-color: #494e53; gap: 5%"
                   >
                     <i class="fa-solid fa-cube fs-5"></i>
                     <h6 class="fw-medium pt-2" style="font-size: 14px">
@@ -484,11 +484,11 @@
                       <table class="table">
                         <thead>
                           <tr>
-                            <th>ID</th>
-                            <th>Username</th>
-                            <th>Full Name</th>
-                            <th>Email</th>
-                            <th>Role</th>
+                            <th>Item Code</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Available Stock</th>
+                            <th>Opening Date</th>
                             <th>Status</th>
                             <th style="width: 20%">Actions</th>
                           </tr>
@@ -508,37 +508,25 @@
                     <div
                       class="card-header d-flex flex-row justify-content-between align-items-center px-4"
                     >
-                      <h5 class="fw-medium pt-2">Add New Users</h5>
+                      <h5 class="fw-medium pt-2">Create New Item</h5>
                       <button
                         type="button"
                         class="btn btn-secondary"
                         onclick="backToUser()"
                       >
-                        Back To Users
+                        Back To List
                       </button>
                     </div>
                     <div class="card-body">
                       <form onsubmit="createUser(); return false;">
                         <div class="row py-2">
-                          <div
-                            class="col-12 mb-4 warning d-none d-flex justify-content-center"
-                          >
-                            <div
-                              class="p-3 text-center text-light"
-                              style="
-                                width: 80%;
-                                background-color: #f44747;
-                                border: 2px solid red;
-                              "
-                            ></div>
-                          </div>
                           <div class="col-6">
                             <div>
-                              <label for="username" class="fw-semibold mb-2"
-                                >Username</label
+                              <label for="code" class="fw-semibold mb-2"
+                                >Code</label
                               >
                               <input
-                                id="username"
+                                id="code"
                                 type="text"
                                 class="form-control"
                                 style="border: 2px solid #c5c3c3 !important"
@@ -548,53 +536,11 @@
                           </div>
                           <div class="col-6">
                             <div>
-                              <label for="email" class="fw-semibold mb-2"
-                                >Email</label
+                              <label for="name" class="fw-semibold mb-2"
+                                >Name</label
                               >
                               <input
-                                id="email"
-                                type="email"
-                                class="form-control"
-                                style="border: 2px solid #c5c3c3 !important"
-                                required
-                              />
-                            </div>
-                          </div>
-                          <div class="col-6 mt-lg-3">
-                            <div>
-                              <label for="password" class="fw-semibold mb-2"
-                                >Password</label
-                              >
-                              <input
-                                id="password"
-                                type="password"
-                                class="form-control"
-                                style="border: 2px solid #c5c3c3 !important"
-                                required
-                              />
-                            </div>
-                          </div>
-                          <div class="col-6 mt-lg-3">
-                            <div>
-                              <label for="cpassword" class="fw-semibold mb-2">
-                                Confirm Password</label
-                              >
-                              <input
-                                id="cpassword"
-                                type="password"
-                                class="form-control"
-                                style="border: 2px solid #c5c3c3 !important"
-                                required
-                              />
-                            </div>
-                          </div>
-                          <div class="col-6 mt-lg-3">
-                            <div>
-                              <label for="fullname" class="fw-semibold mb-2"
-                                >Full Name</label
-                              >
-                              <input
-                                id="fullname"
+                                id="name"
                                 type="text"
                                 class="form-control"
                                 style="border: 2px solid #c5c3c3 !important"
@@ -602,13 +548,27 @@
                               />
                             </div>
                           </div>
+                          <div class="col-12 mt-lg-3">
+                            <div>
+                              <label for="description" class="fw-semibold mb-2"
+                                >Description</label
+                              >
+                              <textarea
+                                class="form-control"
+                                id="description"
+                                style="border: 2px solid #c5c3c3 !important"
+                                required
+                                rows="4"
+                              ></textarea>
+                            </div>
+                          </div>
                           <div class="col-6 mt-lg-3">
                             <div>
-                              <label for="role" class="fw-semibold mb-2"
-                                >Role</label
+                              <label for="catogory" class="fw-semibold mb-2"
+                                >Catogory</label
                               >
                               <select
-                                id="role"
+                                id="catogory"
                                 class="form-select"
                                 style="border: 2px solid #c5c3c3 !important"
                                 required
@@ -616,9 +576,64 @@
                                 <option value="" disabled selected>
                                   Select role
                                 </option>
-                                <option value="Admin">Admin</option>
-                                <option value="Super User">Super User</option>
+                                <option value="General">General</option>
+                                <option value="Test">Test</option>
                               </select>
+                            </div>
+                          </div>
+                          <div class="col-6 mt-lg-3">
+                            <div>
+                              <label for="menu" class="fw-semibold mb-2"
+                                >Menu Code</label
+                              >
+                              <select
+                                id="menu"
+                                class="form-select"
+                                style="border: 2px solid #c5c3c3 !important"
+                                required
+                              >
+                                <option value="" disabled selected>
+                                  Select role
+                                </option>
+                                <option
+                                  value="M1 - Maintenance items - Level 1"
+                                >
+                                  M1 - Maintenance items - Level 1
+                                </option>
+                                <option
+                                  value="M2 - Maintenance items - Level 2"
+                                >
+                                  M2 - Maintenance items - Level 2
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-6 mt-lg-3">
+                            <div>
+                              <label for="stock" class="fw-semibold mb-2"
+                                >Opening Stock</label
+                              >
+                              <input
+                                id="stock"
+                                type="text"
+                                class="form-control"
+                                style="border: 2px solid #c5c3c3 !important"
+                                required
+                              />
+                            </div>
+                          </div>
+                          <div class="col-6 mt-lg-3">
+                            <div>
+                              <label for="date" class="fw-semibold mb-2"
+                                >Opening Stock Date</label
+                              >
+                              <input
+                                id="date"
+                                type="date"
+                                class="form-control"
+                                style="border: 2px solid #c5c3c3 !important"
+                                required
+                              />
                             </div>
                           </div>
                           <div class="col-6 mt-lg-3">
@@ -651,13 +666,13 @@
                               >
                                 Save Item
                               </button>
-                              <button-
+                              <button
                                 type="button"
                                 class="btn btn-secondary fw-medium"
                                 onclick="backToUser()"
                               >
                                 Cancel
-                              </button->
+                              </button>
                             </div>
                           </div>
                         </div>

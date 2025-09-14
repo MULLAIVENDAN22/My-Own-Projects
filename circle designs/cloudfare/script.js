@@ -1,4 +1,4 @@
-const userDetails = {
+const userProfile = {
   username: "admin",
   password: "password",
 };
@@ -14,8 +14,8 @@ document.querySelector("button").addEventListener("click", () => {
     return;
   }
   if (
-    input[0].value.toLocaleLowerCase() == userDetails.username &&
-    input[1].value.toLocaleLowerCase() == userDetails.password
+    input[0].value.toLocaleLowerCase() == userProfile.username &&
+    input[1].value.toLocaleLowerCase() == userProfile.password
   ) {
     window.document.location.href = "./dashboard/index.html";
   } else {

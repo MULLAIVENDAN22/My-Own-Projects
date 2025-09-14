@@ -4,7 +4,6 @@ const systemadmin = document.querySelector(".systemadmin");
 system.addEventListener("click", (e) => {
   e.stopPropagation();
   systemadmin.classList.toggle("d-none");
-  console.log("not a system");
 });
 
 document.addEventListener("click", (e) => {
@@ -12,8 +11,6 @@ document.addEventListener("click", (e) => {
     !e.target.classList.contains("system") &&
     !e.target.classList.contains("systemadmin")
   ) {
-    console.log("not a system");
-
     systemadmin.classList.add("d-none");
   }
 });
@@ -50,9 +47,8 @@ const navigation = [
   "dashboard",
 ];
 
-
-navigation.forEach((value)=>{
-  document.querySelector("." + value).addEventListener("click",()=>{
-    window.location.href = `../${value}/index.html`
-  })
-})
+navigation.forEach((value) => {
+  document.querySelector("." + value).addEventListener("click", () => {
+    window.location.href = `../${value}/index.html`;
+  });
+});

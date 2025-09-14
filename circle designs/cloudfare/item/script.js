@@ -1,55 +1,43 @@
 const userDetails = [
   {
-    id: 1,
-    username: "admin",
-    email: "admin@example.com",
-    password: "password",
-    fullname: "System Administrator",
-    role: "Admin",
-    status: "Active",
-    delete: false,
+    Code: "As123",
+    name: "Product",
+    category: "General",
+    stock: "Available Stock",
+    date: "09 Apr 2025",
+    menu: "M1 - Maintenance items - Level 1",
+    description: "admin",
+    status: "active",
   },
-  {
-    id: 2,
-    username: "dummyadmin",
-    email: "dummyadmin@example.com",
-    password: "password",
-    fullname: "System Administrator",
-    role: "Super User",
-    status: "Active",
-    delete: true,
-  },
+  
 ];
 
 const tbody = document.querySelector("tbody");
-const id = [2];
 
 const set = new Set([userDetails[0].username, userDetails[1].username]);
 
 function adduser(obj) {
-  tbody.innerHTML += `
-    <tr class="user">
-      <td>${obj.id}</td>
-      <td>${obj.username}</td>
-      <td>${obj.fullname}</td>
-      <td>${obj.email}</td>
-      <td>${obj.role}</td>
-      <td>
-        <button
-          type="button"
-          class="text-light active px-2 py-1 fw-semibold ${userStatus(obj.status)}"
-          style="border: none; border-radius: 5px"
-        >
-          ${obj.status}
-        </button>
-      </td>
-      <td class="px-4">${btndecide(obj.delete)}</td>
-    </tr>
-  `;
+  tbody.innerHTML += ` <tr class = "user">
+                          <td>${obj.Code}</td>
+                          <td>${obj.name}</td>
+                          <td>${obj.category}</td>
+                          <td>${obj.stock}</td>
+                          <td>${obj.date}</td>
+                            <td>
+                            <button type="button" class="text-light active px-2 py-1 fw-semibold ${userStatus(obj.status)}"
+                             style="border: none; border-radius: 5px">
+                              ${obj.status}
+                            </button>
+                          </td>
+                           <td class="px-4">
+                            <button type="button" class="btn btn-primary edit me-2 fw-medium">Edit</button>
+                            <button type="button" class="btn btn-danger delete fw-medium">Delete</button>
+                          </td>
+                        </tr>`;
 }
 
 function userStatus(status) {
-  return status.toLowerCase() == "active" ? " active" : " inactive";
+  return status == "active" ? " active" : " inactive";
 }
 
 function btndecide(action) {
@@ -72,28 +60,24 @@ userDetails.forEach((element) => {
   adduser(element);
 });
 
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("delete")) {
-    deletebtn(e.target);
-  }
-  if (e.target.classList.contains("edit")) {
-    editbtn(e.target);
-  }
-});
+const deletebtn = document.querySelectorAll(".delete");
+console.log(deletebtn);
 
-function deletebtn(e) {
-  console.log("delete is clicked");
-  const user = e.closest(".user");
-  const td = user.querySelectorAll("td");
-  userDetails.forEach((element, index) => {
-    if (element.id == td[0].textContent) {
-      userDetails.splice(index, 1);
-      user.remove();
-      console.log(userDetails);
-      return;
-    }
+deletebtn.forEach((value) => {
+  value.addEventListener("click", (e) => {
+    console.log("delete is clicked");
+    const user = e.target.closest(".user");
+    const td = user.querySelectorAll("td");
+    userDetails.forEach((element, index) => {
+      if (element.id == td[0].textContent) {
+        userDetails.splice(index, 1);
+        user.remove();
+        console.log(userDetails);
+        return;
+      }
+    });
   });
-}
+});
 
 const card1 = document.querySelector(".card1");
 const card2 = document.querySelector(".card2");
@@ -163,17 +147,20 @@ function createUser() {
   console.log(userDetails);
 }
 
-function editbtn(e) {
-  console.log("edit is clicked");
-  const user = e.closest(".user");
-  const td = user.querySelectorAll("td");
-  userDetails.forEach((element, index) => {
-    if (element.id == td[0].textContent) {
-      editUser(user, index);
-      return;
-    }
+const editbtn = document.querySelectorAll(".edit");
+editbtn.forEach((value) => {
+  value.addEventListener("click", (e) => {
+    console.log("edit is clicked");
+    const user = e.target.closest(".user");
+    const td = user.querySelectorAll("td");
+    userDetails.forEach((element, index) => {
+      if (element.id == td[0].textContent) {
+        editUser(user, index);
+        return;
+      }
+    });
   });
-}
+});
 
 function editUser(user, index) {
   newUser();
@@ -182,7 +169,7 @@ function editUser(user, index) {
   document.querySelector("#email").value = userDetails[index].email;
   document.querySelector("#password").value = userDetails[index].password;
   document.querySelector("#cpassword").value = userDetails[index].password;
-  document.querySelector("#fullname").value = userDetails[index].fullname;
+  document.querySelector("#fname").value = userDetails[index].fullname;
   user.remove();
   edited[0] = true;
   edited[1] = index;
