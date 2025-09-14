@@ -3,7 +3,7 @@ const userDetails = [
     name: "General",
     description: "General category",
     created: "System Administrator",
-    status: "active",
+    status: "Active",
   },
 ];
 
@@ -28,7 +28,7 @@ function adduser(obj) {
 }
 
 function userStatus(status) {
-  return status == "active" ? " active" : " inactive";
+  return status.toLowerCase() == "active" ? " active" : " inactive";
 }
 
 userDetails.forEach((element) => {
