@@ -90,7 +90,7 @@
       background-color: green;
     }
     .verified {
-      background-color: rgb(20, 255, 251);
+      background-color: rgb(22, 212, 208);
     }
 
     @keyframes spin {
@@ -469,7 +469,7 @@
               <div class="row mt-4">
                 <div class="col-12 px-3">
                   <div
-                    class="card card1 "
+                    class="card card1"
                     style="
                       box-shadow:
                         rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
@@ -497,14 +497,36 @@
                             <td>PO-20250411-5232</td>
                             <td>test</td>
                             <td>Location 01110</td>
-                            <td></td>
+                            <td>
+                              <button
+                                type="button"
+                                class="text-light verified px-2 py-1 fw-semibold verified"
+                                style="border: none; border-radius: 5px"
+                              >
+                                verified
+                              </button>
+                            </td>
                             <td>User</td>
                             <td>Apr 11, 2025 04:43</td>
-                             </td>
-                           <td class="px-4">
-                            <button type="button" onclick="change()" class="btn btn-primary me-2 py-1 px-2"><i class="fa-solid fa-eye fs-5"></i></button>
-                            <button type="button" onclick="downloadFile()" class="btn btn-danger py-1 px-2"><i class="fa-solid fa-file-pdf text-light fs-5"></i></button>
-                          </td>
+
+                            <td class="px-4">
+                              <button
+                                type="button"
+                                onclick="change()"
+                                class="btn btn-primary me-2 py-1 px-2"
+                              >
+                                <i class="fa-solid fa-eye fs-5"></i>
+                              </button>
+                              <button
+                                type="button"
+                                onclick="downloadFile()"
+                                class="btn btn-danger py-1 px-2"
+                              >
+                                <i
+                                  class="fa-solid fa-file-pdf text-light fs-5"
+                                ></i>
+                              </button>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
