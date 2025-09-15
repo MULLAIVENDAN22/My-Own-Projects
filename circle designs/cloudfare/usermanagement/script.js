@@ -68,9 +68,12 @@ function btndecide(action) {
         `;
 }
 
-userDetails.forEach((element) => {
-  adduser(element);
-});
+function display() {
+  userDetails.forEach((element) => {
+    adduser(element);
+  });
+}
+display();
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
@@ -136,7 +139,8 @@ function createUser() {
     set.add(user.username);
     userDetails.splice(edited[1], 1, user);
     edited[0] = false;
-    adduser(userDetails[edited[1]]);
+    tbody.innerHTML = "";
+    display();
   } else {
     if (set.has(document.querySelector("#username").value)) {
       warning.classList.toggle("d-none");
@@ -183,7 +187,7 @@ function editUser(user, index) {
   document.querySelector("#password").value = userDetails[index].password;
   document.querySelector("#cpassword").value = userDetails[index].password;
   document.querySelector("#fullname").value = userDetails[index].fullname;
-  user.remove();
+
   edited[0] = true;
   edited[1] = index;
   console.log(edited);

@@ -1,38 +1,28 @@
 const userDetails = [
   {
-    code: "As123",
-    name: "Product",
-    category: "General",
-    stock: "109.00",
-    date: "2025-04-09",
-    menu: "M1 - Maintenance items - Level 1",
-    description: "admin",
-    status: "Active",
-  },
-  {
-    code: "GEN0001",
+    id: 1,
     name: "test",
-    category: "General",
-    stock: "34.00",
-    date: "2025-03-24",
-    menu: "M2 - Maintenance items - Level 2",
-    description: "admin",
+    address: "india",
+    contact: "test",
+    email: "test@test.com",
+    phone: "1234567890",
+    items: ["Product", "Product Item", "Test", "Test Item"],
     status: "Active",
   },
 ];
 
-const tbody = document.querySelector("tbody");
+const id = [1];
 
-const set = new Set([userDetails[0].code, userDetails[1].code]);
+const tbody = document.querySelector("tbody");
 
 function adduser(obj) {
   tbody.innerHTML += ` <tr class = "user">
-                          <td>${obj.code}</td>
+                          <td>${obj.id}</td>
                           <td>${obj.name}</td>
-                          <td>${obj.category}</td>
-                          <td>${obj.stock}</td>
-                          <td>${obj.date}</td>
-                            <td>
+                          <td>${obj.contact}</td>
+                          <td>${obj.email}</td>
+                          <td>${obj.phone}</td>
+                          <td>
                             <button type="button" class="text-light active px-2 py-1 fw-semibold ${userStatus(obj.status)}"
                              style="border: none; border-radius: 5px">
                               ${obj.status}
@@ -43,6 +33,8 @@ function adduser(obj) {
                             <button type="button" class="btn btn-danger delete fw-medium">Delete</button>
                           </td>
                         </tr>`;
+  const form = document.querySelector("form");
+  form.reset();
 }
 
 function userStatus(status) {
@@ -56,6 +48,8 @@ function display() {
 }
 display();
 
+const edited = [false, -1];
+
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
     deletebtn(e.target);
@@ -66,11 +60,10 @@ document.addEventListener("click", (e) => {
 });
 
 function deletebtn(e) {
-  console.log("delete is clicked");
   const user = e.closest(".user");
   const td = user.querySelectorAll("td");
   userDetails.forEach((element, index) => {
-    if (element.code == td[0].textContent) {
+    if (element.id == td[0].textContent) {
       userDetails.splice(index, 1);
       user.remove();
       console.log(userDetails);
@@ -90,61 +83,81 @@ function backToUser() {
   card2.classList.toggle("d-none");
 }
 
-const edited = [false, -1];
-
 function createUser() {
-  const warning = document.querySelector(".warning");
+  console.log("created");
 
+  const warning = document.querySelector(".warning");
+  const checkbox = document.querySelectorAll(".btn-check");
+  let count = 0;
+  for (let element of checkbox) {
+    if (element.checked) {
+      count++;
+    }
+  }
+
+  if (count <= 0) {
+    warning.classList.toggle("d-none");
+    warning.children[0].innerHTML = ` <h6 class="fw-bold pb-2">CheckBox is Not selected</h6>`;
+    return;
+  }
   if (edited[0]) {
     console.log("editied is used", edited);
-
+    const checkboxArray = [];
+    checkbox.forEach((element) => {
+      if (element.checked) {
+        checkboxArray.push(element.value);
+      }
+    });
     const user = {
-      code: document.querySelector("#code").value,
+      id: userDetails[edited[1]].id,
       name: document.querySelector("#name").value,
-      category: document.querySelector("#category").value,
-      stock: document.querySelector("#stock").value,
-      date: document.querySelector("#date").value,
+      contact: document.querySelector("#contact").value,
+      email: document.querySelector("#email").value,
+      phone: document.querySelector("#phone").value,
       status: document.querySelector("#status").value,
-      menu: document.querySelector("#menu").value,
-      description: document.querySelector("#description").value,
+      item: checkboxArray,
+      address: document.querySelector("#address").value,
     };
-    set.delete(userDetails[edited[1]].code);
-    set.add(user.code);
+    console.log(user);
+
     userDetails[edited[1]] = user;
     edited[0] = false;
     tbody.innerHTML = "";
     display();
   } else {
-    if (set.has(document.querySelector("#code").value)) {
-      warning.classList.toggle("d-none");
-      warning.children[0].innerHTML = ` <h6 class="fw-bold pb-2">Username already exist</h6>`;
-      return;
-    }
+    id[0]++;
+
+    const checkboxArray = [];
+    checkbox.forEach((element) => {
+      if (element.checked) {
+        checkboxArray.push(element.value);
+      }
+    });
+
     const user = {
-      code: document.querySelector("#code").value,
+      id: id[0],
       name: document.querySelector("#name").value,
-      category: document.querySelector("#category").value,
-      stock: document.querySelector("#stock").value,
-      date: document.querySelector("#date").value,
+      contact: document.querySelector("#contact").value,
+      email: document.querySelector("#email").value,
+      phone: document.querySelector("#phone").value,
       status: document.querySelector("#status").value,
-      menu: document.querySelector("#menu").value,
-      description: document.querySelector("#description").value,
+      address: document.querySelector("#address").value,
+      item: checkboxArray,
     };
     userDetails.push(user);
-    set.add(user.code);
+    console.log(userDetails);
     adduser(user);
   }
-
-  backToUser();
   console.log(userDetails);
+  warning.classList.toggle("d-none");
+  backToUser();
 }
 
 function editbtn(e) {
-  console.log("edit is clicked");
   const user = e.closest(".user");
   const td = user.querySelectorAll("td");
   userDetails.forEach((element, index) => {
-    if (element.code == td[0].textContent) {
+    if (element.id == td[0].textContent) {
       editUser(user, index);
       return;
     }
@@ -153,13 +166,11 @@ function editbtn(e) {
 
 function editUser(user, index) {
   newUser();
-
-  document.querySelector("#code").value = userDetails[index].code;
   document.querySelector("#name").value = userDetails[index].name;
-  document.querySelector("#stock").value = userDetails[index].stock;
-  document.querySelector("#date").value = userDetails[index].date;
-  document.querySelector("#description").value = userDetails[index].description;
-
+  document.querySelector("#contact").value = userDetails[index].contact;
+  document.querySelector("#email").value = userDetails[index].email;
+  document.querySelector("#phone").value = userDetails[index].phone;
+  document.querySelector("#address").value = userDetails[index].address;
   edited[0] = true;
   edited[1] = index;
   console.log(edited);

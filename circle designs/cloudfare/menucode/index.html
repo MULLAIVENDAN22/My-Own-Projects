@@ -180,7 +180,7 @@
                 <div class="col-12 mt-1 category">
                   <div
                     class="d-flex flex-row align-items-center ps-3 sidebar py-1"
-                    style="color: white; background-color: #494e53; gap: 5%"
+                    style="color: rgb(206, 206, 206); gap: 5%"
                   >
                     <i class="fa-solid fa-table fs-5"></i>
                     <h6 class="fw-medium pt-2" style="font-size: 14px">
@@ -202,7 +202,7 @@
                 <div class="col-12 mt-1 menucode">
                   <div
                     class="d-flex flex-row align-items-center ps-3 sidebar py-1"
-                    style="color: rgb(206, 206, 206); gap: 5%"
+                    style="color: white; background-color: #494e53; gap: 5%"
                   >
                     <i class="fa-solid fa-tags fs-5"></i>
                     <h6 class="fw-medium pt-2" style="font-size: 14px">
@@ -461,7 +461,7 @@
               <div class="row mt-4">
                 <div class="col-12 px-3">
                   <div
-                    class="card card1"
+                    class="card card1 "
                     style="
                       box-shadow:
                         rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
@@ -471,23 +471,24 @@
                     <div
                       class="card-header d-flex flex-row justify-content-between align-items-center px-4"
                     >
-                      <h5 class="fw-medium pt-2">category List</h5>
+                      <h5 class="fw-medium pt-2">Menu Code List</h5>
                       <button
                         type="button"
                         class="btn btn-primary"
                         onclick="newUser()"
                       >
-                        Add Catogory
+                        Add Menu Code
                       </button>
                     </div>
                     <div class="card-body p-3">
                       <table class="table">
                         <thead>
                           <tr>
-                            <th>Name</th>
+                            <th>#</th>
+                            <th>Code</th>
                             <th>Description</th>
-                            <th>Created By</th>
                             <th>Status</th>
+                            <th>Created At</th>
                             <th style="width: 20%">Actions</th>
                           </tr>
                         </thead>
@@ -506,49 +507,30 @@
                     <div
                       class="card-header d-flex flex-row justify-content-between align-items-center px-4"
                     >
-                      <h5 class="fw-medium pt-2">Create New Catogory</h5>
+                      <h5 class="fw-medium pt-2">Add New Menu Code</h5>
                       <button
                         type="button"
                         class="btn btn-secondary"
                         onclick="backToUser()"
                       >
-                        Back To List
+                        Back To Menu Code
                       </button>
                     </div>
                     <div class="card-body">
                       <form onsubmit="createUser(); return false;">
                         <div class="row py-2">
-                          <div class="col-6">
+                          <div class="col-12">
                             <div>
-                              <label for="name" class="fw-semibold mb-2"
-                                >Name</label
+                              <label for="code" class="fw-semibold mb-2"
+                                >Code</label
                               >
                               <input
-                                id="name"
+                                id="code"
                                 type="text"
                                 class="form-control"
                                 style="border: 2px solid #c5c3c3 !important"
                                 required
                               />
-                            </div>
-                          </div>
-                          <div class="col-6">
-                            <div>
-                              <label for="status" class="fw-semibold mb-2"
-                                >Status</label
-                              >
-                              <select
-                                id="status"
-                                class="form-select"
-                                style="border: 2px solid #c5c3c3 !important"
-                                required
-                              >
-                                <option value="" disabled selected>
-                                  Select status
-                                </option>
-                                <option value="Active">Active</option>
-                                <option value="Inactive">Inactive</option>
-                              </select>
                             </div>
                           </div>
                           <div class="col-12 mt-lg-3">
@@ -574,7 +556,7 @@
                                 type="submit"
                                 class="btn btn-primary fw-medium"
                               >
-                                Save Catogory
+                                Save Menu Code
                               </button>
                               <button
                                 type="button"

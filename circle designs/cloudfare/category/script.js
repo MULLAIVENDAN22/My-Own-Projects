@@ -31,9 +31,12 @@ function userStatus(status) {
   return status.toLowerCase() == "active" ? " active" : " inactive";
 }
 
-userDetails.forEach((element) => {
-  adduser(element);
-});
+function display() {
+  userDetails.forEach((element) => {
+    adduser(element);
+  });
+}
+display();
 
 const edited = [false, -1];
 
@@ -86,7 +89,8 @@ function createUser() {
 
     userDetails[edited[1]] = user;
     edited[0] = false;
-    adduser(userDetails[edited[1]]);
+    tbody.innerHTML = "";
+    display();
   } else {
     const user = {
       name: document.querySelector("#name").value,
@@ -118,7 +122,6 @@ function editUser(user, index) {
   document.querySelector("#name").value = userDetails[index].name;
   document.querySelector("#description").value = userDetails[index].description;
 
-  user.remove();
   edited[0] = true;
   edited[1] = index;
   console.log(edited);
