@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="en">
+  <!-- timming   12 30  
+    3 26             -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../../customized_bootstrap.css" />
+    <title></title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        font-family: "Poppins", sans-serif;
+        background-color: white;
+        box-sizing: border-box;
+        overflow-y: scroll;
+      }
+      ul li a {
+        color: black !important;
+        text-decoration: none;
+      }
+      button {
+        border: none;
+      }
+      .pagination li a:hover {
+        background-color: #3a7afe;
+        color: white !important;
+      }
+      .pagination li a {
+        font-weight: 600;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+      .navbar-nav li a:hover {
+        color: #3a7afe !important;
+      }
+      .row .right-column {
+        position: sticky !important;
+        top: 100px !important;
+      }
+    </style>
+    <link rel="stylesheet" href="../" />
+  </head>
+  <body>
+    <div class="container">
+      <header
+        class="px-2"
+        style="
+          position: sticky;
+          top: 0;
+          background-color: white;
+          z-index: 5;
+          box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        "
+      >
+        <nav class="navbar navbar-white py-3 navbar-expand-lg">
+          <a
+            class="navbar-brand fs-3 fw-bolder"
+            style="height: 50px; width: 100px"
+            data-aos="fade-down"
+            data-aos-duration="7000"
+            data-aos-delay="800"
+            ><img
+              src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/logo.png"
+              alt=""
+              srcset=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTarget"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="list collapse navbar-collapse" id="collapseTarget">
+            <ul
+              class="navbar-nav ms-auto fw-bold d-flex align-items-center"
+              data-aos="fade-down"
+              data-aos-duration="7000"
+              data-aos-delay="1300"
+              style="font-size: 18px"
+            >
+              <li class="nav-item ms-4">
+                <a class="nav-link lastbtn" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link lastbtn" href="../index.html">About us</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link lastbtn">Shop</a>
+              </li>
+              <li class="nav-item ms-4">
+                <div class="dropdown">
+                  <a
+                    class="btn btn-secondary dropdown-toggle nav-link"
+                    style="border: none; background-color: white"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Blog
+                  </a>
+
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="index.html">Blog List</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="blogGrid.html"
+                        >Blog Grid</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="BlogDetails.html"
+                        >Blog Details</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link lastbtn" href="BlogDetails.html"
+                  >Contact us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="row">
+        <div class="col-12 mt-3">
+          <div
+            style="
+              height: 300px;
+              width: 100%;
+              background-image: url(https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/banner/bnr2.jpg);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-color: aqua;
+            "
+          >
+            <div
+              style="
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 110, 255, 0.8);
+                color: white;
+                justify-content: center;
+                align-items: center;
+              "
+              class="d-flex flex-column"
+            >
+              <h1 class="p-4" style="font-size: 50px; font-weight: 900">
+                Blog Details
+              </h1>
+              <h3
+                class="p-3 fs-5"
+                style="background-color: rgba(255, 255, 255, 0.3)"
+              >
+                Home >> Blog List Slidbar
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="overflow: visible">
+        <div class="row my-5">
+          <div class="col-7 left-column pe-3">
+            <div class="w-100">
+              <img
+                class="img-fluid"
+                height="400px"
+                src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/blog/large/pic1.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <div
+                class="d-flex flex-row mt-4 align-items-center"
+                style="color: #959292"
+              >
+                <div class="mx-2 me-3">
+                  <img
+                    style="height: 50px; width: 50px"
+                    class="img-fluid"
+                    src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/avatar/avatar3.jpg"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <h6 class="me-3">By Jone Doe</h6>
+                <div
+                  class="mx-2 mb-2 me-3"
+                  style="
+                    height: 6px;
+                    width: 6px;
+                    background-color: #3a7afe;
+                    border-radius: 50%;
+                  "
+                ></div>
+
+                <h6 class="me-2">17 May 2022</h6>
+                <div
+                  class="mx-2 mb-2 me-3"
+                  style="
+                    height: 6px;
+                    width: 6px;
+                    background-color: #3a7afe;
+                    border-radius: 50%;
+                  "
+                ></div>
+                <h6 class="">3 comment</h6>
+              </div>
+            </div>
+            <div class="mt-3">
+              <h1 class="fw-bolder">We Merge Fashion</h1>
+              <p class="pb-3" style="font-size: 17px; color: #959292">
+                Please make sure you understand what rights you are claiming
+                before you submit a DMCA takedown notice because it is a serious
+                legal document. Consider whether you need legal advice. It's
+                really important not to make false claims as this could have
+                serious legal consequences.
+              </p>
+              <p class="" style="font-size: 17px; color: #959292">
+                penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus. Integer tristique elit lobortis purus bibendum, quis dictum
+                metus mattis. Phasellus posuere felis sed eros porttitor mattis.
+                Curabitur massa magna, tempor in blandit id, porta in ligula.
+                Aliquam laoreet nisl massa, at interdum mauris sollicitudin
+                et.Harvel is a copyright protection platform for next-gen
+                creators, crawling the web on a daily basis in order to find
+                piracy links and copyright infringement of your content. Ip>
+              </p>
+              <div
+                class="mt-3 p-4"
+                style="
+                  border-left: 5px solid #3a7afe;
+                  background-color: rgba(225, 225, 225, 0.4);
+                "
+              >
+                <p class="fs-5" style="font-weight: 700; font-style: italic">
+                  “As the capability to create typography has become ubiquitous,
+                  the application of principles and best practices developed
+                  over generations of skilled workers and professionals has
+                  diminished. Ironically, at a time when scientific techniques.”
+                </p>
+                <h6 class="pt-3 pb-2 ms-5 fw-bold" style="color: #3a7afe">
+                  ------ &nbsp; MotaAdmin
+                </h6>
+              </div>
+              <p class="pb-3 mt-4" style="font-size: 17px; color: #959292">
+                Phasellus enim magna, varius et commodo ut, ultricies vitae
+                velit. Ut nulla tellus, eleifend euismod and pellentesque vel,
+                sagittis vel justo. In libero urna, venenatis sit amet ornare
+                non, suscipit nec risus. Sed consequat justo non mauris pretium
+                at tempor justo sodales.
+              </p>
+              <ul id="p-list" style="list-style-type: disc; color: #959292">
+                <li class="py-1">
+                  Equipment you can count on. People you can trust.
+                </li>
+                <li class="py-1">
+                  Advanced Service Functions by Air Transport
+                </li>
+                <li class="py-1">
+                  Proper arrangement for keeping the goods in the warehouse
+                </li>
+              </ul>
+              <p class="pb-3" style="font-size: 17px; color: #959292">
+                The inner sanctuary, I throw myself down among the tall grass by
+                the trickling stream; and, as I lie close to the earth, a
+                thousand unknown plants are noticed by me: when I hear the buzz
+                of the little world among the stalks, and grow familiar with the
+                countless indescribable forms of the insects and flies, then I
+                feel the presence of the Almighty.
+              </p>
+              <h4 class="mt-5 mb-3">Related Blog</h4>
+              <div
+                style="height: 3px; width: 50px; background-color: #3a7afe"
+              ></div>
+              <div class="mt-4 d-flex flex-row">
+                <div
+                  class="card d-flex flex-column pb-2 me-3"
+                  style="width: 47%"
+                >
+                  <div
+                    class="mb-5"
+                    style="position: relative; width: 100%; height: 200px"
+                  >
+                    <img
+                      class="img-fluid"
+                      style="object-fit: cover"
+                      src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/blog/pic3.jpg"
+                      alt=""
+                      srcset=""
+                    />
+                    <div style="position: absolute; top: 10px; left: 10px">
+                      <h6
+                        class="py-1 px-2"
+                        style="font-size: 12px; background-color: white"
+                      >
+                        22 AUG 2018
+                      </h6>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="d-flex flex-row justify-content-center mt-4">
+                      <div class="">
+                        <i
+                          style="color: #3a7afe; font-size: 20px"
+                          class="fa-solid fa-user me-2"
+                        ></i>
+                      </div>
+                      <h6 class="" style="white-space: nowrap">
+                        By<span style="color: #3a7afe"> Kk Sharma</span>
+                      </h6>
+                      <div
+                        class="mt-2 mx-2"
+                        style="
+                          height: 6px;
+                          width: 6px;
+                          background-color: #3a7afe;
+                          border-radius: 50%;
+                        "
+                      ></div>
+                      <div class="">
+                        <i
+                          style="color: #3a7afe; font-size: 20px"
+                          class="fa-solid fa-comment me-2"
+                        ></i>
+                      </div>
+                      <h6 style="white-space: nowrap">24 Comments</h6>
+                    </div>
+                    <div class="px-4">
+                      <h2 class="fw-bolder fs-5 mt-4">
+                        Feel Unique And Good In New Dress
+                      </h2>
+                      <p class="py-2" style="font-size: 15px">
+                        A wonderful serenity has taken of my entire soul, like
+                        these.
+                      </p>
+                      <button
+                        class="px-4 py-3 mt-1"
+                        style="
+                          background-color: rgb(243, 243, 243);
+                          font-weight: 600;
+                        "
+                      >
+                        Read More
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card d-flex flex-column pb-2" style="width: 47%">
+                  <div
+                    class="mb-5"
+                    style="position: relative; width: 100%; height: 200px"
+                  >
+                    <img
+                      class="img-fluid"
+                      style="object-fit: cover"
+                      src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/blog/pic2.jpg"
+                      alt=""
+                      srcset=""
+                    />
+                    <div style="position: absolute; top: 10px; left: 10px">
+                      <h6
+                        class="py-1 px-2"
+                        style="font-size: 12px; background-color: white"
+                      >
+                        22 AUG 2018
+                      </h6>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="d-flex flex-row justify-content-center mt-4">
+                      <div class="">
+                        <i
+                          style="color: #3a7afe; font-size: 20px"
+                          class="fa-solid fa-user me-2"
+                        ></i>
+                      </div>
+                      <h6 class="" style="white-space: nowrap">
+                        By<span style="color: #3a7afe"> Kk Sharma</span>
+                      </h6>
+                      <div
+                        class="mt-2 mx-2"
+                        style="
+                          height: 6px;
+                          width: 6px;
+                          background-color: #3a7afe;
+                          border-radius: 50%;
+                        "
+                      ></div>
+                      <div class="">
+                        <i
+                          style="color: #3a7afe; font-size: 20px"
+                          class="fa-solid fa-comment me-2"
+                        ></i>
+                      </div>
+                      <h6 style="white-space: nowrap">24 Comments</h6>
+                    </div>
+                    <div class="px-4">
+                      <h2 class="fw-bolder fs-5 mt-4">
+                        30 Blog Post Ideas for Fashion Bloggers
+                      </h2>
+                      <p class="py-2" style="font-size: 15px">
+                        A wonderful serenity has taken of my entire soul, like
+                        these.
+                      </p>
+                      <button
+                        class="px-4 py-3 mt-1"
+                        style="
+                          background-color: rgb(243, 243, 243);
+                          font-weight: 600;
+                        "
+                      >
+                        Read More
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="mt-5 mb-3">Comments</h4>
+              <div
+                style="height: 3px; width: 50px; background-color: #3a7afe"
+              ></div>
+              <div class="d-flex flex-row mt-4">
+                <div class="me-3">
+                  <img
+                    style="height: 110px; width: 200px; object-fit: cover"
+                    class="img-fluid"
+                    src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/blog/pic2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h6>Celesto Anderson</h6>
+                  <p class="pb-1 mt-1" style="font-size: 17px; color: #959292">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                  <div class="" style="color: #3a7afe; font-size: 16px">
+                    <span><i class="fa-solid fa-reply"></i> Reply</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex flex-row mt-4 ms-5">
+                <div class="me-3">
+                  <img
+                    style="height: 110px; width: 200px; object-fit: cover"
+                    class="img-fluid"
+                    src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/avatar/avatar2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h6>Jake Johnson</h6>
+                  <p class="pb-1 mt-1" style="font-size: 17px; color: #959292">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                  <div class="" style="color: #3a7afe; font-size: 16px">
+                    <span><i class="fa-solid fa-reply"></i> Reply</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex flex-row mt-4">
+                <div class="me-3">
+                  <img
+                    style="height: 110px; width: 200px; object-fit: cover"
+                    class="img-fluid"
+                    src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/avatar/avatar3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h6>John Doe</h6>
+                  <p class="pb-1 mt-1" style="font-size: 17px; color: #959292">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                  <div class="" style="color: #3a7afe; font-size: 16px">
+                    <span><i class="fa-solid fa-reply"></i> Reply</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex flex-row mt-4">
+                <div class="me-3">
+                  <img
+                    style="height: 110px; width: 200px; object-fit: cover"
+                    class="img-fluid"
+                    src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/avatar/avatar1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h6>Celesto Anderson</h6>
+                  <p class="pb-1 mt-1" style="font-size: 17px; color: #959292">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                  <div class="" style="color: #3a7afe; font-size: 16px">
+                    <span><i class="fa-solid fa-reply"></i> Reply</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <h4 class="mt-5 mb-3">Leave Your Comment</h4>
+              <div
+                style="height: 3px; width: 50px; background-color: #3a7afe"
+              ></div>
+              <div>
+                <div class="my-5">
+                  <input
+                    class="me-3 p-3"
+                    style="width: 48%"
+                    placeholder="Author"
+                    type="text"
+                  />
+                  <input
+                    class="p-3"
+                    style="width: 48%"
+                    placeholder="Email"
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    class="p-3"
+                    name=""
+                    id=""
+                    rows="4"
+                    cols="87"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <button class="btn btn-primary mt-4">Submit</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 ps-4">
+            <div class="right-column">
+              <h4>Search</h4>
+              <div
+                style="height: 3px; width: 50px; background-color: #3a7afe"
+              ></div>
+              <div class="d-flex align-items-center my-3">
+                <input
+                  class="px-3"
+                  style="height: 55px; width: 70%"
+                  type="text"
+                  placeholder="Search..."
+                  name=""
+                  id=""
+                />
+                <span class="">
+                  <i
+                    class="fa-solid fa-magnifying-glass fs-4 p-3"
+                    style="background-color: #3a7afe; color: white"
+                  ></i>
+                </span>
+              </div>
+              <h4 class="mt-5">Categories</h4>
+              <div
+                style="height: 3px; width: 50px; background-color: #3a7afe"
+              ></div>
+              <div>
+                <ul class="mt-4" style="list-style-type: none !important">
+                  <div class="d-flex flex-row align-items-center py-2">
+                    <svg
+                      class="me-3"
+                      style="height: 15px; width: 15px"
+                      viewBox="0 0 512 512"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      fill="#000000"
+                      transform="matrix(1, 0, 0, 1, 0, 0)rotate(90)"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tra#3a7afeerCarrier"
+                        stroke-line#3a7afeap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_i#3a7afeonCarrier">
+                        <title>triangle-filled</title>
+                        <g
+                          id="Page-1"
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="e#3a7afeenodd"
+                        >
+                          <g
+                            id="drop"
+                            fill="#3a7afe"
+                            transform="translate(32.000000, 42.666667)"
+                          >
+                            <path
+                              d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z"
+                              id="Combined-Shape"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    <li>Categories(10)</li>
+                  </div>
+                  <div class="d-flex flex-row align-items-center py-2">
+                    <svg
+                      class="me-3"
+                      style="height: 15px; width: 15px"
+                      viewBox="0 0 512 512"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      fill="#000000"
+                      transform="matrix(1, 0, 0, 1, 0, 0)rotate(90)"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tra#3a7afeerCarrier"
+                        stroke-line#3a7afeap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_i#3a7afeonCarrier">
+                        <title>triangle-filled</title>
+                        <g
+                          id="Page-1"
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="e#3a7afeenodd"
+                        >
+                          <g
+                            id="drop"
+                            fill="#3a7afe"
+                            transform="translate(32.000000, 42.666667)"
+                          >
+                            <path
+                              d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z"
+                              id="Combined-Shape"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    <li>Education(13)</li>
+                  </div>
+                  <div class="d-flex flex-row align-items-center py-2">
+                    <svg
+                      class="me-3"
+                      style="height: 15px; width: 15px"
+                      viewBox="0 0 512 512"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      fill="#000000"
+                      transform="matrix(1, 0, 0, 1, 0, 0)rotate(90)"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tra#3a7afeerCarrier"
+                        stroke-line#3a7afeap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_i#3a7afeonCarrier">
+                        <title>triangle-filled</title>
+                        <g
+                          id="Page-1"
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="e#3a7afeenodd"
+                        >
+                          <g
+                            id="drop"
+                            fill="#3a7afe"
+                            transform="translate(32.000000, 42.666667)"
+                          >
+                            <path
+                              d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z"
+                              id="Combined-Shape"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    <li>Information(9)</li>
+                  </div>
+                  <div class="d-flex flex-row align-items-center py-2">
+                    <svg
+                      class="me-3"
+                      style="height: 15px; width: 15px"
+                      viewBox="0 0 512 512"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      fill="#000000"
+                      transform="matrix(1, 0, 0, 1, 0, 0)rotate(90)"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tra#3a7afeerCarrier"
+                        stroke-line#3a7afeap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_i#3a7afeonCarrier">
+                        <title>triangle-filled</title>
+                        <g
+                          id="Page-1"
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="e#3a7afeenodd"
+                        >
+                          <g
+                            id="drop"
+                            fill="#3a7afe"
+                            transform="translate(32.000000, 42.666667)"
+                          >
+                            <path
+                              d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z"
+                              id="Combined-Shape"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    <li>Jobs(3)</li>
+                  </div>
+                  <div class="d-flex flex-row align-items-center py-2">
+                    <svg
+                      class="me-3"
+                      style="height: 15px; width: 15px"
+                      viewBox="0 0 512 512"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      fill="#000000"
+                      transform="matrix(1, 0, 0, 1, 0, 0)rotate(90)"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tra#3a7afeerCarrier"
+                        stroke-line#3a7afeap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_i#3a7afeonCarrier">
+                        <title>triangle-filled</title>
+                        <g
+                          id="Page-1"
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="e#3a7afeenodd"
+                        >
+                          <g
+                            id="drop"
+                            fill="#3a7afe"
+                            transform="translate(32.000000, 42.666667)"
+                          >
+                            <path
+                              d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z"
+                              id="Combined-Shape"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    <li>Learn(12)</li>
+                  </div>
+                  <div class="d-flex flex-row align-items-center py-2">
+                    <svg
+                      class="me-3"
+                      style="height: 15px; width: 15px"
+                      viewBox="0 0 512 512"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      fill="#000000"
+                      transform="matrix(1, 0, 0, 1, 0, 0)rotate(90)"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tra#3a7afeerCarrier"
+                        stroke-line#3a7afeap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_i#3a7afeonCarrier">
+                        <title>triangle-filled</title>
+                        <g
+                          id="Page-1"
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="e#3a7afeenodd"
+                        >
+                          <g
+                            id="drop"
+                            fill="#3a7afe"
+                            transform="translate(32.000000, 42.666667)"
+                          >
+                            <path
+                              d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z"
+                              id="Combined-Shape"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    <li>Skill(6)</li>
+                  </div>
+                </ul>
+              </div>
+              <h4 class="mt-5">Recent Post</h4>
+              <div
+                style="height: 3px; width: 50px; background-color: #3a7afe"
+              ></div>
+              <div class="d-flex align-items-center my-4">
+                <div class="mt-3">
+                  <img
+                    style="height: 100px; width: 170px; object-fit: cover"
+                    class="img-fluid"
+                    src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/blog/small/pic1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="ms-4 mt-3">
+                  <h5 class="py-1 fs-5">
+                    Equipment you can count on. People you can trust.
+                  </h5>
+                  <h6 style="color: #a5a5a5">17 May 2022</h6>
+                </div>
+              </div>
+              <div class="d-flex align-items-center my-4">
+                <div class="mt-3">
+                  <img
+                    style="height: 100px; width: 150px; object-fit: cover"
+                    class="img-fluid"
+                    src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/blog/small/pic2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="ms-4 mt-3">
+                  <h5 class="py-1 fs-5">
+                    Advanced Service Functions by Air Transport
+                  </h5>
+                  <h6 style="color: #a5a5a5">07 Jan, 2022</h6>
+                </div>
+              </div>
+              <div class="d-flex align-items-center my-4">
+                <div class="mt-3">
+                  <img
+                    style="height: 100px; width: 200px; object-fit: cover"
+                    class="img-fluid"
+                    src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/blog/small/pic3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="ms-4 mt-3">
+                  <h5 class="py-1 fs-5">
+                    Proper arrangement for keeping the goods in the warehouse
+                  </h5>
+                  <h6 style="color: #a5a5a5">25 Aug, 2022</h6>
+                </div>
+              </div>
+              <div class="d-flex align-items-center my-4">
+                <div class="mt-3">
+                  <img
+                    style="height: 100px; width: 170px; object-fit: cover"
+                    class="img-fluid"
+                    src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/blog/small/pic1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="ms-4 mt-3">
+                  <h5 class="py-1 fs-5">
+                    Equipment you can count on. People you can trust.
+                  </h5>
+                  <h6 style="color: #a5a5a5">17 May 2022</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row my-5">
+          <div class="col-12 my-5 d-flex flex-row justify-content-between">
+            <div class="d-flex align-items-center">
+              <div class="me-3" style="color: rgb(145, 145, 145)">
+                <i class="fa-solid fa-truck fs-1"></i>
+              </div>
+              <div style="text-align: center">
+                <h3 class="fw-bolder" style="font-size: 22px !important">
+                  Free Shipping
+                </h3>
+                <h5
+                  style="color: rgb(144, 140, 140); font-size: 14px !important"
+                >
+                  Shipping On All Order.
+                </h5>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <div class="me-3" style="color: rgb(139, 136, 136)">
+                <i class="fa-solid fa-certificate fs-1"></i>
+              </div>
+              <div style="text-align: center">
+                <h3 class="fw-bolder" style="font-size: 22px !important">
+                  Money Guarantee
+                </h3>
+                <h5
+                  style="color: rgb(144, 140, 140); font-size: 14px !important"
+                >
+                  30 Day Money Back
+                </h5>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <div class="me-3" style="color: rgb(139, 136, 136)">
+                <i class="fa-solid fa-headset fs-1"></i>
+              </div>
+              <div style="text-align: center">
+                <h3 class="fw-bolder" style="font-size: 22px !important">
+                  Online Support 24/7
+                </h3>
+                <h5
+                  style="color: rgb(144, 140, 140); font-size: 14px !important"
+                >
+                  Technical Support 24/7
+                </h5>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <div class="me-3" style="color: rgb(139, 136, 136)">
+                <i class="fa-solid fa-shield fs-1"></i>
+              </div>
+              <div style="text-align: center">
+                <h3 class="fw-bolder" style="font-size: 22px !important">
+                  Safe Payment
+                </h3>
+                <h5
+                  style="color: rgb(144, 140, 140); font-size: 14px !important"
+                >
+                  Transfer a Payment
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container py-3 mb-4 px-4"
+        style="width: 100%; background-color: rgb(244, 244, 244)"
+      >
+        <div class="row mt-3 mb-5">
+          <div class="col-6">
+            <a class="fs-3 fw-bolder" style="height: 50px; width: 100px"
+              ><img
+                src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/logo.png"
+                alt=""
+                srcset=""
+            /></a>
+            <p class="mt-3 px-2" style="width: 80%; text-indent: 50px">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur amet nobis aperiam sint, pariatur dolor,
+            </p>
+          </div>
+          <div class="col-6">
+            <h4 class="fw-bold my-4">Subscribe To Our Newsletter</h4>
+            <div>
+              <input
+                style="height: 52px; width: 80%"
+                placeholder="Enter the email"
+                class="py-1 ps-3 pe-5"
+                type="text"
+              />
+              <button
+                class="btn btn-secondary py-2 px-3"
+                style="
+                  position: relative;
+                  right: 20%;
+                  background-color: black !important;
+                  border-radius: 0;
+                "
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="row mt-5">
+            <div class="col-12">
+              <h5 style="color: rgb(156, 156, 156); text-align: center">
+                Copyright 2023 All right reserved.
+              </h5>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init();
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- word chaning  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="blogDetailsScript.js"></script>
+  </body>
+</html>

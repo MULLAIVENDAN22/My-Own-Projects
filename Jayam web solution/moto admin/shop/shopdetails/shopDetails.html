@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="en">
+  <!-- timming   6 10  
+    7 19             -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../../../customized_bootstrap.css" />
+    <title></title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        font-family: "Poppins", sans-serif;
+        background-color: white;
+        box-sizing: border-box;
+        overflow-y: scroll;
+      }
+      .navbar-nav li a {
+        color: black !important;
+        text-decoration: none;
+      }
+      button {
+        border: none;
+      }
+      .pagination li a:hover {
+        background-color: #3a7afe;
+        color: white !important;
+      }
+      .pagination li a {
+        font-weight: 600;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      ul li {
+        list-style-type: none;
+      }
+      .navbar-nav li a:hover {
+        color: #3a7afe !important;
+      }
+      .mini-nav li a {
+        color: #5d5e61;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .mini-nav-a {
+        color: #3a7afe !important;
+        text-decoration: underline #3a7afe 2px !important;
+        text-underline-offset: 5px !important;
+      }
+
+      .underline {
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 15px;
+        text-decoration-color: #3a7afe;
+      }
+      .tags h6 {
+        font-size: 12px;
+        color: #4d86fe;
+        background-color: #ebf1ff;
+        transition: all 0.7s ease-out;
+      }
+
+      .tags h6:hover {
+        color: white;
+        background-color: #3a7afe;
+      }
+    </style>
+    <link rel="stylesheet" href="../../../../../customized_bootstrap.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header
+        class="px-2"
+        style="
+          position: sticky;
+          top: 0;
+          background-color: white;
+          z-index: 5;
+          box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        "
+      >
+        <nav class="navbar navbar-white py-3 navbar-expand-lg">
+          <a
+            class="navbar-brand fs-3 fw-bolder"
+            style="height: 50px; width: 100px"
+            data-aos="fade-down"
+            data-aos-duration="7000"
+            data-aos-delay="800"
+            ><img
+              src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/logo.png"
+              alt=""
+              srcset=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTarget"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="list collapse navbar-collapse" id="collapseTarget">
+            <ul
+              class="navbar-nav ms-auto fw-bold d-flex align-items-center"
+              data-aos="fade-down"
+              data-aos-duration="7000"
+              data-aos-delay="1300"
+              style="font-size: 18px"
+            >
+              <li class="nav-item ms-4">
+                <a class="nav-link lastbtn" href="index.html">Home</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link lastbtn" href="index.html">About us</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link lastbtn">Shop</a>
+              </li>
+              <li class="nav-item ms-4">
+                <div class="dropdown">
+                  <a
+                    class="btn btn-secondary dropdown-toggle nav-link"
+                    style="border: none; background-color: white"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Blog
+                  </a>
+
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="./blog/index.html"
+                        >Blog List</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./blog/blogGrid.html"
+                        >Blog Grid</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./blog/BlogDetails.html"
+                        >Blog Details</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link lastbtn" href="./blog/BlogDetails.html"
+                  >Contact us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="row">
+        <div class="col-12 mt-3">
+          <div
+            style="
+              height: 300px;
+              width: 100%;
+              background-image: url(https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/banner/bnr2.jpg);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-color: aqua;
+            "
+          >
+            <div
+              style="
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 110, 255, 0.8);
+                color: white;
+                justify-content: center;
+                align-items: center;
+              "
+              class="d-flex flex-column"
+            >
+              <h1 class="p-4" style="font-size: 50px; font-weight: 900">
+                Blog List Slidbar
+              </h1>
+              <h3
+                class="p-3 fs-5"
+                style="background-color: rgba(255, 255, 255, 0.3)"
+              >
+                Home >> About
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row my-5 pt-4">
+        <div class="col-5">
+          <div>
+            <img
+              class="img-fluid"
+              src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/about/pic6.jpg"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+        <div class="col-7">
+          <div class="">
+            <h2 class="fw-semibold">Think and Grow Rich</h2>
+            <div
+              class="d-flex flex-row justify-content-between align-items-center mb-3"
+            >
+              <div
+                class="d-flex flex-row justify-content-center align-items-center mx-4"
+                style="height: 40px; width: 140px; gap: 3%"
+              >
+                <svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M9.00001 0H7.00001L5.51292 4.57681L0.700554 4.57682L0.0825195 6.47893L3.97581 9.30756L2.48873 13.8843L4.10677 15.0599L8.00002 12.2313L11.8933 15.0599L13.5113 13.8843L12.0242 9.30754L15.9175 6.47892L15.2994 4.57681L10.4871 4.57681L9.00001 0Z"
+                      fill="#EFD430"
+                    ></path>
+                  </g>
+                </svg>
+                <svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M9.00001 0H7.00001L5.51292 4.57681L0.700554 4.57682L0.0825195 6.47893L3.97581 9.30756L2.48873 13.8843L4.10677 15.0599L8.00002 12.2313L11.8933 15.0599L13.5113 13.8843L12.0242 9.30754L15.9175 6.47892L15.2994 4.57681L10.4871 4.57681L9.00001 0Z"
+                      fill="#EFD430"
+                    ></path>
+                  </g>
+                </svg>
+                <svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M9.00001 0H7.00001L5.51292 4.57681L0.700554 4.57682L0.0825195 6.47893L3.97581 9.30756L2.48873 13.8843L4.10677 15.0599L8.00002 12.2313L11.8933 15.0599L13.5113 13.8843L12.0242 9.30754L15.9175 6.47892L15.2994 4.57681L10.4871 4.57681L9.00001 0Z"
+                      fill="#EFD430"
+                    ></path>
+                  </g>
+                </svg>
+                <svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M9.00001 0H7.00001L5.51292 4.57681L0.700554 4.57682L0.0825195 6.47893L3.97581 9.30756L2.48873 13.8843L4.10677 15.0599L8.00002 12.2313L11.8933 15.0599L13.5113 13.8843L12.0242 9.30754L15.9175 6.47892L15.2994 4.57681L10.4871 4.57681L9.00001 0Z"
+                      fill="#EFD430"
+                    ></path>
+                  </g>
+                </svg>
+                <svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M9.00001 0H7.00001L5.51292 4.57681L0.700554 4.57682L0.0825195 6.47893L3.97581 9.30756L2.48873 13.8843L4.10677 15.0599L8.00002 12.2313L11.8933 15.0599L13.5113 13.8843L12.0242 9.30754L15.9175 6.47892L15.2994 4.57681L10.4871 4.57681L9.00001 0Z"
+                      fill="#EFD430"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="ms-2">4.0</span>
+              </div>
+              <div
+                class="d-flex flex-row justify-content-center align-items-center mx-4"
+                style="gap: 3%"
+              >
+                <svg
+                  style="height: 25px; width: 25px"
+                  viewBox="0 0 48 48"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#000000"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>Facebook-color</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g
+                      id="Icons"
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g
+                        id="Color-"
+                        transform="translate(-200.000000, -160.000000)"
+                        fill="#4460A0"
+                      >
+                        <path
+                          d="M225.638355,208 L202.649232,208 C201.185673,208 200,206.813592 200,205.350603 L200,162.649211 C200,161.18585 201.185859,160 202.649232,160 L245.350955,160 C246.813955,160 248,161.18585 248,162.649211 L248,205.350603 C248,206.813778 246.813769,208 245.350955,208 L233.119305,208 L233.119305,189.411755 L239.358521,189.411755 L240.292755,182.167586 L233.119305,182.167586 L233.119305,177.542641 C233.119305,175.445287 233.701712,174.01601 236.70929,174.01601 L240.545311,174.014333 L240.545311,167.535091 C239.881886,167.446808 237.604784,167.24957 234.955552,167.24957 C229.424834,167.24957 225.638355,170.625526 225.638355,176.825209 L225.638355,182.167586 L219.383122,182.167586 L219.383122,189.411755 L225.638355,189.411755 L225.638355,208 L225.638355,208 Z"
+                          id="Facebook"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+                <svg
+                  style="height: 25px; width: 25px"
+                  fill="#00a7fa"
+                  height="200px"
+                  width="200px"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="-143 145 512 512"
+                  xml:space="preserve"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M329,145h-432c-22.1,0-40,17.9-40,40v432c0,22.1,17.9,40,40,40h432c22.1,0,40-17.9,40-40V185C369,162.9,351.1,145,329,145z M215.2,361.2c0.1,2.2,0.1,4.5,0.1,6.8c0,69.5-52.9,149.7-149.7,149.7c-29.7,0-57.4-8.7-80.6-23.6c4.1,0.5,8.3,0.7,12.6,0.7 c24.6,0,47.3-8.4,65.3-22.5c-23-0.4-42.5-15.6-49.1-36.5c3.2,0.6,6.5,0.9,9.9,0.9c4.8,0,9.5-0.6,13.9-1.9 C13.5,430-4.6,408.7-4.6,383.2v-0.6c7.1,3.9,15.2,6.3,23.8,6.6c-14.1-9.4-23.4-25.6-23.4-43.8c0-9.6,2.6-18.7,7.1-26.5 c26,31.9,64.7,52.8,108.4,55c-0.9-3.8-1.4-7.8-1.4-12c0-29,23.6-52.6,52.6-52.6c15.1,0,28.8,6.4,38.4,16.6 c12-2.4,23.2-6.7,33.4-12.8c-3.9,12.3-12.3,22.6-23.1,29.1c10.6-1.3,20.8-4.1,30.2-8.3C234.4,344.5,225.5,353.7,215.2,361.2z"
+                    ></path>
+                  </g>
+                </svg>
+                <svg
+                  style="height: 25px; width: 25px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="WhatsApp"
+                  role="img"
+                  viewBox="0 0 512 512"
+                  fill="#000000"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <rect
+                      width="512"
+                      height="512"
+                      rx="15%"
+                      fill="#25d366"
+                    ></rect>
+                    <path
+                      fill="#25d366"
+                      stroke="#ffffff"
+                      stroke-width="26"
+                      d="M123 393l14-65a138 138 0 1150 47z"
+                    ></path>
+                    <path
+                      fill="#ffffff"
+                      d="M308 273c-3-2-6-3-9 1l-12 16c-3 2-5 3-9 1-15-8-36-17-54-47-1-4 1-6 3-8l9-14c2-2 1-4 0-6l-12-29c-3-8-6-7-9-7h-8c-2 0-6 1-10 5-22 22-13 53 3 73 3 4 23 40 66 59 32 14 39 12 48 10 11-1 22-10 27-19 1-3 6-16 2-18"
+                    ></path>
+                  </g>
+                </svg>
+                <svg
+                  style="height: 25px; width: 25px"
+                  fill="#DB4439"
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title></title>
+                    <g id="Gmail">
+                      <path
+                        d="M25.49,30H4.5A3.35,3.35,0,0,1,2,29a3.35,3.35,0,0,1-1-2.48V5.5A3.35,3.35,0,0,1,2,3,3.35,3.35,0,0,1,4.5,2h21A3.35,3.35,0,0,1,28,3,3.35,3.35,0,0,1,29,5.5v21A3.52,3.52,0,0,1,25.49,30Zm-3-7.17a2.93,2.93,0,0,0,1.71-.37,1.41,1.41,0,0,0,.49-1.22V10.36a1.55,1.55,0,0,0-.47-1.13,1.51,1.51,0,0,0-1.13-.47H6.83a1.55,1.55,0,0,0-1.13.47,1.53,1.53,0,0,0-.47,1.12V21.24a1.53,1.53,0,0,0,.47,1.12,1.55,1.55,0,0,0,1.13.47Zm-14.7-.76V13.14l6.46,4.45Zm14.14.37H8l6.63-4.63a.6.6,0,0,0,.34.16,1,1,0,0,0,.33-.16Zm-7-8.15L8,9.16H21.9Zm7.14,7.78-6.46-4.48,6.46-4.45Z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row align-items-center pb-2"
+              style="gap: 3%"
+            >
+              <div>
+                <img
+                  class="img-fluid"
+                  src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/blog/small/pic3.jpg"
+                  alt=""
+                  srcset=""
+                  style="height: 60px"
+                />
+              </div>
+              <div
+                class="d-flex flex-row"
+                style="gap: 10%; white-space: nowrap"
+              >
+                <div>
+                  <h6 style="color: #a2a2a7">Writen by</h6>
+                  <h5>Kevin Smiley</h5>
+                </div>
+                <div>
+                  <h6 style="color: #a2a2a7">Publisher</h6>
+                  <h5>Printarea Studios</h5>
+                </div>
+                <div>
+                  <h6 style="color: #a2a2a7">Year</h6>
+                  <h5>2022</h5>
+                </div>
+              </div>
+            </div>
+            <p
+              class="my-4"
+              style="color: #5f5f60; font-size: 17px; text-indent: 60px"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit.
+            </p>
+            <p
+              class="my-4"
+              style="color: #5f5f60; font-size: 17px; text-indent: 60px"
+            >
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem
+            </p>
+            <div
+              class="d-flex flex-row justify-content-between align-items-center"
+            >
+              <div class="d-flex flex-row align-items-center">
+                <h2 class="me-2" style="color: #3a7afe">$54.78</h2>
+                <h5
+                  class="ms-3"
+                  style="text-decoration: line-through; color: #8f8f91"
+                >
+                  $70.00
+                </h5>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="d-flex flex-row justify-content-center fs-4 me-4">
+                  <span
+                    class="py-2 px-3"
+                    style="background-color: #f3f3f3; border: 1px solid #dbd5d5"
+                    >-</span
+                  >
+                  <span class="py-2 px-4" style="border: 1px solid #dbd5d5"
+                    >1</span
+                  >
+                  <span
+                    class="py-2 px-3"
+                    style="background-color: #f3f3f3; border: 1px solid #dbd5d5"
+                    >+</span
+                  >
+                </div>
+                <button
+                  class="btn btn-secondary fw-semibold px-4 py-3"
+                  style="background-color: #f3f3f3; color: #000; border: none"
+                >
+                  <i class="fa-solid fa-cart-shopping me-2"></i>
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5 pt-3">
+        <div class="col-8">
+          <div class="row mb-4">
+            <div class="col-12 d-flex flex-row taggle">
+              <h4 class="px-3 fw-semibold underline">Details Product</h4>
+              <h4 class="px-3 fw-semibold">Customer Reviews</h4>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-12">
+              <div class="taggleAction">
+                <table
+                  class="table"
+                  style="border: 1px solid #d1d1d5"
+                >
+                  <tbody>
+                    <tr>
+                      <th>Shop Title</th>
+                      <td>Think and Grow Rich</td>
+                    </tr>
+                    <tr>
+                      <th>Author</th>
+                      <td>Napoleon Rich</td>
+                    </tr>
+                    <tr>
+                      <th>ISBN</th>
+                      <td>123456789 (ISBN13: 123456789)</td>
+                    </tr>
+                    <tr>
+                      <th>Ediiton Language</th>
+                      <td>English</td>
+                    </tr>
+                    <tr>
+                      <th>Shop Format</th>
+                      <td>Paperback, 450 Pages</td>
+                    </tr>
+                    <tr>
+                      <th>Date Published</th>
+                      <td>August 10th 2019</td>
+                    </tr>
+                    <tr>
+                      <th>Publisher</th>
+                      <td>Wepress Inc.</td>
+                    </tr>
+                    <tr>
+                      <th>Pages</th>
+                      <td>7</td>
+                    </tr>
+                    <tr>
+                      <th>Topic</th>
+                      <td>360</td>
+                    </tr>
+                    <tr>
+                      <th class="pt-3">Tags</th>
+                      <td
+                        class="d-flex flex-row align-items-center tags pt-3"
+                        style="gap: 3%"
+                      >
+                        <h6 class="p-1">Drame</h6>
+                        <h6 class="p-1">Adventure</h6>
+                        <h6 class="p-1">Survival</h6>
+                        <h6 class="p-1">Biography</h6>
+                        <h6 class="p-1">Trending2022</h6>
+                        <h6 class="p-1">BestSeller</h6>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="d-none taggleAction">
+                <div class="d-flex flex-row mt-4">
+                  <div class="me-3">
+                    <img
+                      style="height: 110px; width: 200px; object-fit: cover"
+                      class="img-fluid"
+                      src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/blog/pic2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6>Celesto Anderson</h6>
+                    <p
+                      class="pb-1 mt-1"
+                      style="font-size: 17px; color: #959292"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                    <div class="" style="color: #3a7afe; font-size: 16px">
+                      <span><i class="fa-solid fa-reply"></i> Reply</span>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="d-flex flex-row mt-4 ms-5">
+                  <div class="me-3">
+                    <img
+                      style="height: 110px; width: 200px; object-fit: cover"
+                      class="img-fluid"
+                      src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/avatar/avatar2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6>Jake Johnson</h6>
+                    <p
+                      class="pb-1 mt-1"
+                      style="font-size: 17px; color: #959292"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                    <div class="" style="color: #3a7afe; font-size: 16px">
+                      <span><i class="fa-solid fa-reply"></i> Reply</span>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="d-flex flex-row mt-4">
+                  <div class="me-3">
+                    <img
+                      style="height: 110px; width: 200px; object-fit: cover"
+                      class="img-fluid"
+                      src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/avatar/avatar3.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6>John Doe</h6>
+                    <p
+                      class="pb-1 mt-1"
+                      style="font-size: 17px; color: #959292"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                    <div class="" style="color: #3a7afe; font-size: 16px">
+                      <span><i class="fa-solid fa-reply"></i> Reply</span>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="d-flex flex-row mt-4">
+                  <div class="me-3">
+                    <img
+                      style="height: 110px; width: 200px; object-fit: cover"
+                      class="img-fluid"
+                      src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/avatar/avatar1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6>Celesto Anderson</h6>
+                    <p
+                      class="pb-1 mt-1"
+                      style="font-size: 17px; color: #959292"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                    <div class="" style="color: #3a7afe; font-size: 16px">
+                      <span><i class="fa-solid fa-reply"></i> Reply</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <h3>Related Product</h3>
+          <div
+            style="height: 3px; width: 50px; background-color: #3a7afe"
+          ></div>
+          <div class="row my-4 py-1">
+            <div class="col-4 d-flex justify-content-center align-items-center">
+              <img
+                class="img-fluid"
+                src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/product/pic7.png"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="col-8">
+              <h5 class="mb-2">T-Shirt</h5>
+              <p class="m-0 p-0" style="color: #3a7afe; font-size: 15px">
+                THRILLE , DRAMA, HORROR
+              </p>
+              <h6 class="mt-2 p-0" style="color: #3a7afe">
+                $45.4
+                <span style="text-decoration: line-through; color: #b0b2b4">
+                  $98.4
+                </span>
+              </h6>
+              <button
+                class="px-3 py-2 mt-1"
+                style="background-color: rgb(243, 243, 243); font-weight: 600; font-size: 13px;"
+              >
+                <i class="fa-solid fa-cart-shopping me-2"></i>
+                Add To Cart
+              </button>
+            </div>
+          </div>
+          <div class="row my-4 py-1">
+            <div class="col-4 d-flex justify-content-center align-items-center">
+              <img
+                class="img-fluid"
+                src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/product/pic8.png"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="col-8">
+              <h5 class="mb-2">T-Shirt</h5>
+              <p class="m-0 p-0" style="color: #3a7afe; font-size: 15px">
+                THRILLE , DRAMA, HORROR
+              </p>
+              <h6 class="mt-2 p-0" style="color: #3a7afe">
+                $45.4
+                <span style="text-decoration: line-through; color: #b0b2b4">
+                  $98.4
+                </span>
+              </h6>
+              <button
+                class="px-3 py-2 mt-1"
+                style="background-color: rgb(243, 243, 243); font-weight: 600; font-size: 13px;"
+              >
+                <i class="fa-solid fa-cart-shopping me-2"></i>
+                Add To Cart
+              </button>
+            </div>
+          </div>
+          <div class="row my-4 py-1">
+            <div class="col-4 d-flex justify-content-center align-items-center">
+              <img
+                class="img-fluid"
+                src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/product/pic10.png"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="col-8">
+              <h5 class="mb-2">T-Shirt</h5>
+              <p class="m-0 p-0" style="color: #3a7afe; font-size: 15px">
+                THRILLE , DRAMA, HORROR
+              </p>
+              <h6 class="mt-2 p-0" style="color: #3a7afe">
+                $45.4
+                <span style="text-decoration: line-through; color: #b0b2b4">
+                  $98.4
+                </span>
+              </h6>
+              <button
+                class="px-3 py-2 mt-1"
+                style="background-color: rgb(243, 243, 243); font-weight: 600; font-size: 13px;"
+              >
+                <i class="fa-solid fa-cart-shopping me-2"></i>
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="row my-5">
+        <div class="col-12 my-5 d-flex flex-row justify-content-between">
+          <div class="d-flex align-items-center">
+            <div class="me-3" style="color: rgb(145, 145, 145)">
+              <i class="fa-solid fa-truck fs-1"></i>
+            </div>
+            <div style="text-align: center">
+              <h3 class="fw-bolder" style="font-size: 22px !important">
+                Free Shipping
+              </h3>
+              <h5 style="color: rgb(144, 140, 140); font-size: 14px !important">
+                Shipping On All Order.
+              </h5>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="me-3" style="color: rgb(139, 136, 136)">
+              <i class="fa-solid fa-certificate fs-1"></i>
+            </div>
+            <div style="text-align: center">
+              <h3 class="fw-bolder" style="font-size: 22px !important">
+                Money Guarantee
+              </h3>
+              <h5 style="color: rgb(144, 140, 140); font-size: 14px !important">
+                30 Day Money Back
+              </h5>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="me-3" style="color: rgb(139, 136, 136)">
+              <i class="fa-solid fa-headset fs-1"></i>
+            </div>
+            <div style="text-align: center">
+              <h3 class="fw-bolder" style="font-size: 22px !important">
+                Online Support 24/7
+              </h3>
+              <h5 style="color: rgb(144, 140, 140); font-size: 14px !important">
+                Technical Support 24/7
+              </h5>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="me-3" style="color: rgb(139, 136, 136)">
+              <i class="fa-solid fa-shield fs-1"></i>
+            </div>
+            <div style="text-align: center">
+              <h3 class="fw-bolder" style="font-size: 22px !important">
+                Safe Payment
+              </h3>
+              <h5 style="color: rgb(144, 140, 140); font-size: 14px !important">
+                Transfer a Payment
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container py-3 my-4 px-4"
+        style="width: 100%; background-color: rgb(244, 244, 244)"
+      >
+        <div class="row mt-3 mb-5">
+          <div class="col-6">
+            <a class="fs-3 fw-bolder" style="height: 50px; width: 100px"
+              ><img
+                src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/logo.png"
+                alt=""
+                srcset=""
+            /></a>
+            <p class="mt-3 px-2" style="width: 80%; text-indent: 50px">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur amet nobis aperiam sint, pariatur dolor,
+            </p>
+          </div>
+          <div class="col-6">
+            <h4 class="fw-bold my-4">Subscribe To Our Newsletter</h4>
+            <div>
+              <input
+                style="height: 52px; width: 80%"
+                placeholder="Enter the email"
+                class="py-1 ps-3 pe-5"
+                type="text"
+              />
+              <button
+                class="btn btn-secondary py-2 px-3"
+                style="
+                  position: relative;
+                  right: 20%;
+                  background-color: black !important;
+                  border-radius: 0;
+                "
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="row mt-5">
+            <div class="col-12">
+              <h5 style="color: rgb(156, 156, 156); text-align: center">
+                Copyright 2023 All right reserved.
+              </h5>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init();
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="shopdetails.js"></script>
+  </body>
+</html>
