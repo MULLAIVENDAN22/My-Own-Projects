@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Train+One&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Train+One&display=swap"
+      rel="stylesheet"
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -81,6 +85,13 @@
         color: #3a7afe !important;
         text-decoration: underline #3a7afe 2px !important;
         text-underline-offset: 5px !important;
+      }
+      .cursor {
+        cursor: pointer;
+      }
+
+      .wish-active {
+        color: rgb(255, 0, 85) !important;
       }
     </style>
     <link
@@ -178,8 +189,120 @@
               </li>
             </ul>
           </div>
+          <div class="ms-5 d-flex flex-row align-items-center cursor profile">
+            <div>
+              <i
+                class="fa-solid fa-circle-user fs-1"
+                style="color: #838282"
+              ></i>
+            </div>
+            <div class="ms-3">
+              <h3 class="fw-semibold fs-4 currentUserAccount pt-1"></h3>
+            </div>
+          </div>
         </nav>
       </header>
+      <div class="row position-relative d-none profile-action">
+        <div class="col-3 position-absolute end-0" style="z-index: 4">
+          <div
+            class="card"
+            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px"
+          >
+            <div
+              class="card-header text-light"
+              style="background-color: #3a7afe"
+            >
+              <div class="row text-center">
+                <div class="col-12 mt-1 d-flex flex-row justify-content-center">
+                  <img
+                    src="https://cloudbases.in/Inventory/images/icons/profile.png"
+                    class="img-fluid"
+                    alt=""
+                    style="height: 80px; width: 80px"
+                  />
+                </div>
+                <div class="col-12 mt-3">
+                  <h4 class="currentUserAccount fw-semibold fs-4"></h4>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                  <button
+                    type="button"
+                    class="btn signout text-danger px-3"
+                    style="
+                      background-color: rgba(253, 61, 13, 0.1);
+                      border: none;
+                    "
+                  >
+                    <svg
+                      fill="#fe3434"
+                      width="30px"
+                      height="30px"
+                      viewBox="-2.4 -2.4 28.80 28.80"
+                      id="sign-out-2"
+                      data-name="Flat Line"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon flat-line"
+                      stroke="#fe3434"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <polyline
+                          id="primary"
+                          points="18 9 21 12 18 15"
+                          style="
+                            fill: none;
+                            stroke: #d91212;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-width: 1.152;
+                          "
+                        ></polyline>
+                        <line
+                          id="primary-2"
+                          data-name="primary"
+                          x1="21"
+                          y1="12"
+                          x2="7"
+                          y2="12"
+                          style="
+                            fill: none;
+                            stroke: #d91212;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-width: 1.152;
+                          "
+                        ></line>
+                        <path
+                          id="primary-3"
+                          data-name="primary"
+                          d="M14,16v3a1,1,0,0,1-1,1H4a1,1,0,0,1-1-1V5A1,1,0,0,1,4,4h9a1,1,0,0,1,1,1V8"
+                          style="
+                            fill: none;
+                            stroke: #d91212;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-width: 1.152;
+                          "
+                        ></path>
+                      </g>
+                    </svg>
+                    Sign out
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row my-3">
         <div class="col-6 p-5" style="background-color: #eef1f5">
           <div
@@ -789,12 +912,51 @@
       </div>
     </div>
 
-    <script>
-      // Push a fake history entry so back button loops
-      history.pushState(null, null, location.href);
+    
+    <div
+      class="cards d-flex flex-column align-items-center my-2"
+      style="width: 31%"
+    >
+      <div
+        class="d-flex justify-content-center align-items-center position-relative p-5"
+        style="background-color: #eae9e9"
+      >
+        <div class="position-absolute wishlist" style="top: 20px; right: 20px">
+          <i class="fa-solid fa-heart fs-4" style="color: #6f6f6f"></i>
+        </div>
 
+        <img
+          class="img-fluid"
+          src="${val.img}"
+          alt=""
+          style="object-fit: cover"
+        />
+      </div>
+      <h6 class="my-3">${val.h6}</h6>
+      <h5 style="color: #3a7afe">
+        ${val.h5}
+        <span
+          class="ms-3"
+          style="text-decoration: line-through; color: #a5c2ff"
+        >
+          ${val.span}
+        </span>
+      </h5>
+      <div class="d-flex flex-row align-item-center" style="gap: 20%">
+        <h5 class="fw-medium text-primary pt-2" style="white-space: nowrap">
+          ${val.stock} left
+        </h5>
+        <div>
+          <button class="btn btn-secondary" ${disabled(val)}>
+            <i class="fa-solid fa-cart-shopping fs-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      history.pushState(null, null, location.href);
       window.onpopstate = function () {
-        // When back button is pressed, push forward again
         history.go(1);
       };
     </script>
