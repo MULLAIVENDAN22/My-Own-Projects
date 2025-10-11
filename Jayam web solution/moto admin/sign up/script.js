@@ -1,5 +1,7 @@
 const userAccount = [];
-const getUserAccount = JSON.parse(window.localStorage.getItem("userAccount" || "[]"));
+const getUserAccount = JSON.parse(
+  window.localStorage.getItem("userAccount" || "[]")
+);
 getUserAccount.forEach((element) => {
   if (element.status == true) {
     window.location.replace("./home/index.html");
@@ -33,7 +35,7 @@ document.querySelector("button").addEventListener("click", () => {
     const user = {
       username: input[0].value,
       password: input[1].value,
-      status: active,
+      status: true,
     };
     getUserAccount.push(user);
     console.log(getUserAccount);

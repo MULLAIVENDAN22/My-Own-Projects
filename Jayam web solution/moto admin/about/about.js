@@ -3,65 +3,62 @@ const mainImgArray = [
   "https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/home-banner/media-men2.png",
 ];
 
-const mininavArray = [
-  {
-    img: "https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/product/pic1.png",
-    h6: "Collar Regular Fit T-Shirt",
-    h5: "$4.00",
-    span: "$70.00",
-    type: "shirt",
-  },
-  {
-    img: "https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/product/pic2.png",
-    h6: "Men's Wonder Shoes",
-    h5: "$8.00 ",
-    span: "$12.00",
-    type: "shoe",
-  },
-  {
-    img: "https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/product/pic3.png",
-    h6: "Collar Regular Fit T-Shirt",
-    h5: "$4.00",
-    span: "",
-    type: "shirt",
-  },
-  {
-    img: "https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/product/pic4.png",
-    h6: "Men's Wonder Watch",
-    h5: "$8.00 ",
-    span: "$12.00",
-    type: "watch",
-  },
-  {
-    img: "https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/product/pic5.png",
-    h6: "Men's Wonder Blazer",
-    h5: "$6.00",
-    span: "$12.00",
-    type: "blazer",
-  },
-  {
-    img: "https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/product/pic6.png",
-    h6: "Collar Regular Fit T-Shirt",
-    h5: "$6.00",
-    span: "",
-    type: "bag",
-  },
-];
+let currentUserIndex = -1;
+const getUserAccount = JSON.parse(
+  window.localStorage.getItem("userAccount" || "[]")
+);
+if (!getUserAccount.some((element) => element.status == true)) {
+  window.location.replace("../index.html");
+}
 
-let mainImgCount = [0];
-document.addEventListener("DOMContentLoaded", () => {
+const currentUser = document.querySelectorAll(".currentUserAccount");
+getUserAccount.forEach((element, index) => {
+  if (element.status == true) {
+    currentUserIndex = index;
+    currentUser[0].innerHTML = `HI, ${element.username.toUpperCase()}`;
+    currentUser[1].innerHTML = `HI, ${element.username.toUpperCase()}`;
+    return;
+  }
+});
+
+const profile = document.querySelector(".profile");
+profile.addEventListener("click", () => {
+  document.querySelector(".profile-action").classList.toggle("d-none");
+});
+
+const signout = document.querySelector(".signout");
+signout.addEventListener("click", () => {
+  document.querySelector(".profile-action").classList.toggle("d-none");
+  getUserAccount[currentUserIndex].status = false;
+  window.localStorage.setItem("userAccount", JSON.stringify(getUserAccount));
+  window.location.href = "../index.html";
+});
+
+let mininavArray;
+
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch("https://dummyjson.com/c/811b-f8f0-4b2e-ada1");
+    const data = await response.json();
+    console.log(data.products);
+    mininavArray = data.products;
+  } catch (error) {
+    console.log(error);
+  }
+
   mininavArray.forEach((value) => {
     handle(value);
   });
-  const mininav = document.querySelector(".mini-nav");
-  mininav.querySelectorAll("a").forEach((value) => {
-    value.addEventListener("click", (e) => {
-      mininav.querySelectorAll("a").forEach((val) => {
-        if (val.classList.contains("mini-nav-a"))
-          val.classList.remove("mini-nav-a");
-      });
-      navHandle(e.target);
+});
+
+const mininav = document.querySelector(".mini-nav");
+mininav.querySelectorAll("a").forEach((value) => {
+  value.addEventListener("click", (e) => {
+    mininav.querySelectorAll("a").forEach((val) => {
+      if (val.classList.contains("mini-nav-a"))
+        val.classList.remove("mini-nav-a");
     });
+    navHandle(e.target);
   });
 });
 

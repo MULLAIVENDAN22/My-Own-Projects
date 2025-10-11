@@ -148,7 +148,35 @@
                 >
               </li>
               <li class="nav-item ms-4">
-                <a class="nav-link lastbtn">Shop</a>
+                <div class="dropdown">
+                  <a
+                    class="btn btn-secondary dropdown-toggle nav-link"
+                    style="border: none; background-color: white"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Shop
+                  </a>
+
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../shop/whishlist/index.html"
+                        >Wish List</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../shop/shopcart/index.html"
+                        >Shop Cart</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="nav-item ms-4">
                 <div class="dropdown">
@@ -183,13 +211,18 @@
                 </div>
               </li>
               <li class="nav-item ms-4">
-                <a class="nav-link lastbtn" href="./blog/BlogDetails.html"
+                <a class="nav-link lastbtn" href="../blog/BlogDetails.html"
                   >Contact us</a
                 >
               </li>
             </ul>
           </div>
-          <div class="ms-5 d-flex flex-row align-items-center cursor profile">
+          <div
+            class="ms-5 d-flex flex-row align-items-center cursor profile"
+            data-aos="fade-down"
+            data-aos-duration="7000"
+            data-aos-delay="1800"
+          >
             <div>
               <i
                 class="fa-solid fa-circle-user fs-1"
@@ -576,6 +609,8 @@
           </div>
         </div>
       </div>
+
+      
       <div class="row my-5">
         <div class="col-4">
           <div
@@ -912,7 +947,6 @@
       </div>
     </div>
 
-    
     <div
       class="cards d-flex flex-column align-items-center my-2"
       style="width: 31%"

@@ -85,6 +85,11 @@
         text-decoration: underline #3a7afe 2px !important;
         text-underline-offset: 5px !important;
       }
+      table,
+      th,
+      td {
+        border: 1.5px solid rgb(202, 202, 202);
+      }
     </style>
   </head>
   <body>
@@ -128,10 +133,14 @@
               style="font-size: 18px"
             >
               <li class="nav-item ms-4">
-                <a class="nav-link lastbtn" href="../home/index.html">Home</a>
+                <a class="nav-link lastbtn" href="../../home/index.html"
+                  >Home</a
+                >
               </li>
               <li class="nav-item ms-4">
-                <a class="nav-link lastbtn" href="about.html">About us</a>
+                <a class="nav-link lastbtn" href="../../about/about.html"
+                  >About us</a
+                >
               </li>
               <li class="nav-item ms-4">
                 <div class="dropdown">
@@ -148,16 +157,12 @@
 
                   <ul class="dropdown-menu">
                     <li>
-                      <a
-                        class="dropdown-item"
-                        href="../shop/whishlist/index.html"
+                      <a class="dropdown-item" href="../whishlist/index.html"
                         >Wish List</a
                       >
                     </li>
                     <li>
-                      <a
-                        class="dropdown-item"
-                        href="../shop/shopcart/index.html"
+                      <a class="dropdown-item" href="../shopcart/index.html"
                         >Shop Cart</a
                       >
                     </li>
@@ -179,17 +184,19 @@
 
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="./blog/index.html"
+                      <a class="dropdown-item" href="../../blog/index.html"
                         >Blog List</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="./blog/blogGrid.html"
+                      <a class="dropdown-item" href="../../blog/blogGrid.html"
                         >Blog Grid</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="./blog/BlogDetails.html"
+                      <a
+                        class="dropdown-item"
+                        href="../../blog/BlogDetails.html"
                         >Blog Details</a
                       >
                     </li>
@@ -197,7 +204,7 @@
                 </div>
               </li>
               <li class="nav-item ms-4">
-                <a class="nav-link lastbtn" href="../blog/BlogDetails.html"
+                <a class="nav-link lastbtn" href="../../blog/BlogDetails.html"
                   >Contact us</a
                 >
               </li>
@@ -352,62 +359,188 @@
                 class="p-3 fs-5"
                 style="background-color: rgba(255, 255, 255, 0.3)"
               >
-                Home >> About
+                Home >> Shop >> Checkout
               </h3>
             </div>
           </div>
         </div>
       </div>
-      <div class="row my-5">
+      <div class="row mt-5">
         <div class="col-12">
           <div
             class="d-flex flex-column justify-content-center align-items-center"
           >
-            <h1 class="fw-bold fs-lg-55">Best Seller Product</h1>
-            <h5 class="fw-medium" style="color: #3a7afe">
-              TOP VIEW IN THIS WEEK
-            </h5>
-            <ul
-              class="mini-nav mt-4 fw-medium d-flex flex-row align-items-center justify-content-center"
-              style="gap: 15%"
-            >
-              <li>
-                <a class="mini-nav-a all" aria-current="page">ALL</a>
-              </li>
-              <li>
-                <a class="blazer">Blazer</a>
-              </li>
-              <li>
-                <a class="shirt">SHIRT</a>
-              </li>
-              <li>
-                <a class="watch">WATCH</a>
-              </li>
-              <li>
-                <a class="bag">BAG</a>
-              </li>
-            </ul>
+            <h5 class="fw-bold fs-lg-44">YOUR DETAILS</h5>
           </div>
         </div>
       </div>
-      <div class="row my-5">
-        <div class="col-4">
-          <div>
-            <img
-              class="img-fluid"
-              src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/about/pic1.jpg"
-              alt=""
-              style="object-fit: cover"
-            />
-          </div>
-        </div>
+
+      <div class="row mb-5 d-flex justify-content-center">
         <div class="col-8">
+          <h2 class="mt-5 fw-semibold">Billing & Shipping Address</h2>
           <div
-            class="d-flex flex-row flex-fill flex-wrap mt-2 mini-nav-cards"
-            style="gap: 3%"
+            style="height: 3px; width: 50px; background-color: #3a7afe"
           ></div>
         </div>
+        <div class="col-10 mt-3 p-4">
+          <div
+            class="p-4"
+            style="border: 3px solid rgb(99, 99, 99); border-radius: 15px"
+          >
+            <div class="form-check">
+              <input
+                class="form-check-input radiobtn"
+                type="radio"
+                name="radioDefault"
+                id="radioDefault2"
+                style="border: 2px solid rgb(137, 137, 137) !important"
+              />
+              <label class="form-check-label" for="radioDefault2">
+                Default Address
+              </label>
+            </div>
+            <div class="mt-3 mx-5">
+              <h6>
+                No:617, 1st cross street, Appasamy Nagar, Viruthambet, vellore -
+                632006
+              </h6>
+            </div>
+          </div>
+          <div
+            class="mt-3 p-4"
+            style="border: 3px solid rgb(99, 99, 99); border-radius: 15px"
+            d
+          >
+            <div>
+              <div class="form-check">
+                <input
+                  class="form-check-input radiobtn"
+                  type="radio"
+                  name="radioDefault"
+                  id="radioDefault1"
+                  style="border: 2px solid rgb(137, 137, 137) !important"
+                />
+                <label class="form-check-label" for="radioDefault1">
+                  New Address
+                </label>
+              </div>
+            </div>
+            <div class="row ps-5 mt-3 newAddress">
+              <div class="col-6">
+                <div>
+                  <label for="fname" class="fw-semibold">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control py-2 mt-2"
+                    id="fname"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-6">
+                <div>
+                  <label for="lname" class="fw-semibold">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control py-2 mt-2"
+                    id="lname"
+                  />
+                </div>
+              </div>
+              <div class="col-6 mt-3">
+                <div>
+                  <label for="phone" class="fw-semibold">Phone No</label>
+                  <input
+                    type="number"
+                    class="form-control py-2 mt-2"
+                    id="phone"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-6 mt-3">
+                <div>
+                  <label for="" class="fw-semibold">Email</label>
+                  <input
+                    type="email"
+                    class="form-control py-2 mt-2"
+                    id="email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-12 mt-3">
+                <div>
+                  <label for="address" class="fw-semibold">Address</label>
+                  <input
+                    type="text"
+                    class="form-control py-2 mt-2"
+                    id="address"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-6 mt-3">
+                <div>
+                  <label for="appartment" class="fw-semibold"
+                    >Appartment, Suit, Unit,.etc</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control py-2 mt-2"
+                    id="appartment"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-6 mt-3">
+                <div>
+                  <label for="city" class="fw-semibold">Town / City</label>
+                  <input
+                    type="text"
+                    class="form-control py-2 mt-2"
+                    id="city"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-6 mt-3">
+                <div>
+                  <label for="state" class="fw-semibold">State / Country</label>
+                  <input
+                    type="text"
+                    class="form-control py-2 mt-2"
+                    id="state"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-6 mt-3">
+                <div>
+                  <label for="postal" class="fw-semibold"
+                    >Postalcode / Zip</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control py-2 mt-2"
+                    id="postal"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 d-flex justify-content-center mt-5">
+          <div class="">
+            <button class="btn btn-primary fs-5 fw-semibold p-3" type="submit" onclick="finalCheckout()">
+              Proceed Payment
+            </button>
+          </div>
+        </div>
       </div>
+
       <div class="row g-0 my-5">
         <div class="col-6">
           <div
@@ -900,6 +1033,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="about.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

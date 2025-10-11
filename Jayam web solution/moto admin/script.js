@@ -1,10 +1,21 @@
-const userAccount = [];
-const getUserAccount = JSON.parse(window.localStorage.getItem("userAccount" || "[]"));
-getUserAccount.forEach((element) => {
-  if (element.status == true) {
-    window.location.replace("./home/index.html");
-  }
-});
+const userAccount = [
+  {
+    username: "admin",
+    password: "password",
+    status: false,
+  },
+];
+window.localStorage.setItem("userAccount", JSON.stringify(userAccount));
+const getUserAccount = JSON.parse(
+  window.localStorage.getItem("userAccount" || "[]")
+);
+if (getUserAccount) {
+  getUserAccount.forEach((element) => {
+    if (element.status == true) {
+      window.location.replace("./home/index.html");
+    }
+  });
+}
 
 document.querySelector("button").addEventListener("click", () => {
   const input = document.querySelectorAll("input");

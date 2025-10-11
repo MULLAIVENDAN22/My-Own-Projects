@@ -121,7 +121,7 @@ function handle(val) {
                 class="d-flex justify-content-center align-items-center p-5"
                 style="background-color: #EAE9E9"
               >
-              <div class="position-absolute p-4" style="top: 0px; right: 0px; z-index: 10;">
+              <div class="position-absolute p-4" style="top: 0px; right: 0px; z-index: 3;">
                 <i class="fa-solid fa-heart fs-4 wishlist" style="color: #6f6f6f;"></i>
               </div>
 
@@ -170,7 +170,10 @@ function wishlist(e) {
   mininavArray[e.closest(".cards").dataset.id].wishlist =
     !mininavArray[e.closest(".cards").dataset.id].wishlist;
   console.log(mininavArray);
-  window.localStorage.setItem("useractivity", JSON.stringify(mininavArray));
+  window.localStorage.setItem(
+    getUserAccount[currentUserIndex].username,
+    JSON.stringify(mininavArray)
+  );
 }
 
 function shopIcon(e) {
@@ -191,5 +194,8 @@ function shopIcon(e) {
     e.innerHTML = img;
   }, 500);
   console.log(mininavArray);
-  window.localStorage.setItem("useractivity", JSON.stringify(mininavArray));
+  window.localStorage.setItem(
+    getUserAccount[currentUserIndex].username,
+    JSON.stringify(mininavArray)
+  );
 }

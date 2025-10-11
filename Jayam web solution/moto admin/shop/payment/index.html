@@ -85,6 +85,11 @@
         text-decoration: underline #3a7afe 2px !important;
         text-underline-offset: 5px !important;
       }
+      table,
+      th,
+      td {
+        border: 1.5px solid rgb(202, 202, 202);
+      }
     </style>
   </head>
   <body>
@@ -128,10 +133,14 @@
               style="font-size: 18px"
             >
               <li class="nav-item ms-4">
-                <a class="nav-link lastbtn" href="../home/index.html">Home</a>
+                <a class="nav-link lastbtn" href="../../home/index.html"
+                  >Home</a
+                >
               </li>
               <li class="nav-item ms-4">
-                <a class="nav-link lastbtn" href="about.html">About us</a>
+                <a class="nav-link lastbtn" href="../../about/about.html"
+                  >About us</a
+                >
               </li>
               <li class="nav-item ms-4">
                 <div class="dropdown">
@@ -148,16 +157,12 @@
 
                   <ul class="dropdown-menu">
                     <li>
-                      <a
-                        class="dropdown-item"
-                        href="../shop/whishlist/index.html"
+                      <a class="dropdown-item" href="../whishlist/index.html"
                         >Wish List</a
                       >
                     </li>
                     <li>
-                      <a
-                        class="dropdown-item"
-                        href="../shop/shopcart/index.html"
+                      <a class="dropdown-item" href="../shopcart/index.html"
                         >Shop Cart</a
                       >
                     </li>
@@ -179,17 +184,19 @@
 
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="./blog/index.html"
+                      <a class="dropdown-item" href="../../blog/index.html"
                         >Blog List</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="./blog/blogGrid.html"
+                      <a class="dropdown-item" href="../../blog/blogGrid.html"
                         >Blog Grid</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="./blog/BlogDetails.html"
+                      <a
+                        class="dropdown-item"
+                        href="../../blog/BlogDetails.html"
                         >Blog Details</a
                       >
                     </li>
@@ -197,7 +204,7 @@
                 </div>
               </li>
               <li class="nav-item ms-4">
-                <a class="nav-link lastbtn" href="../blog/BlogDetails.html"
+                <a class="nav-link lastbtn" href="../../blog/BlogDetails.html"
                   >Contact us</a
                 >
               </li>
@@ -352,62 +359,32 @@
                 class="p-3 fs-5"
                 style="background-color: rgba(255, 255, 255, 0.3)"
               >
-                Home >> About
+                Home >> Shop >> Payment
               </h3>
             </div>
           </div>
         </div>
       </div>
-      <div class="row my-5">
-        <div class="col-12">
+
+      <div class="row my-5 d-flex justify-content-center payment">
+        <div class="col-7 d-flex flex-row justify-content-center mt-2">
           <div
-            class="d-flex flex-column justify-content-center align-items-center"
+            class="spinner-border text-primary"
+            role="status"
+            style="height: 130px; width: 130px; border-width: 10px"
           >
-            <h1 class="fw-bold fs-lg-55">Best Seller Product</h1>
-            <h5 class="fw-medium" style="color: #3a7afe">
-              TOP VIEW IN THIS WEEK
-            </h5>
-            <ul
-              class="mini-nav mt-4 fw-medium d-flex flex-row align-items-center justify-content-center"
-              style="gap: 15%"
-            >
-              <li>
-                <a class="mini-nav-a all" aria-current="page">ALL</a>
-              </li>
-              <li>
-                <a class="blazer">Blazer</a>
-              </li>
-              <li>
-                <a class="shirt">SHIRT</a>
-              </li>
-              <li>
-                <a class="watch">WATCH</a>
-              </li>
-              <li>
-                <a class="bag">BAG</a>
-              </li>
-            </ul>
+            <span class="visually-hidden">Loading...</span>
           </div>
         </div>
-      </div>
-      <div class="row my-5">
-        <div class="col-4">
+        <div class="col-7 d-flex flex-row justify-content-center mt-5">
           <div>
-            <img
-              class="img-fluid"
-              src="https://motaadmin.dexignlab.com/codeigniter/demo/public/assets/frontend/images/about/pic1.jpg"
-              alt=""
-              style="object-fit: cover"
-            />
+            <h2 class="fw-semibold">Please Be Patient, Don’t Close</h2>
           </div>
         </div>
-        <div class="col-8">
-          <div
-            class="d-flex flex-row flex-fill flex-wrap mt-2 mini-nav-cards"
-            style="gap: 3%"
-          ></div>
-        </div>
+
+        
       </div>
+
       <div class="row g-0 my-5">
         <div class="col-6">
           <div
@@ -900,6 +877,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="about.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
