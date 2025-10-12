@@ -157,12 +157,18 @@
 
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="index.html"
+                      <a
+                        class="dropdown-item"
+                        href="../shop/whishlist/index.html"
                         >Wish List</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="../shopcart/index.html">Shop Cart</a>
+                      <a
+                        class="dropdown-item"
+                        href="../shop/shopcart/index.html"
+                        >Shop Cart</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -182,12 +188,12 @@
 
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="../../blog/index.html"
+                      <a class="dropdown-item" href="../blog/index.html"
                         >Blog List</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="../../blog/blogGrid.html"
+                      <a class="dropdown-item" href="../blog/blogGrid.html"
                         >Blog Grid</a
                       >
                     </li>
@@ -202,7 +208,7 @@
                 </div>
               </li>
               <li class="nav-item ms-4">
-                <a class="nav-link lastbtn" href="../../blog/BlogDetails.html"
+                <a class="nav-link lastbtn" href="../blog/BlogDetails.html"
                   >Contact us</a
                 >
               </li>
@@ -368,7 +374,36 @@
           <div
             class="d-flex flex-column justify-content-center align-items-center"
           >
-            <h5 class="fw-bold fs-lg-44">YOUR WISHLIST</h5>
+            <h5 class="fw-bold fs-lg-44">YOUR ORDER DETAILS</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="row my-5 d-flex justify-content-center payment orderProgress">
+        <div class="col-10">
+          <div class="d-flex justify-content-around">
+            <h5 class="fw-semibold">Ordered</h5>
+            <h5 class="fw-semibold">Shipped</h5>
+            <h5 class="fw-semibold">Out For Delivery</h5>
+            <h5 class="fw-semibold">Delivered</h5>
+          </div>
+          <div
+            class="progress"
+            role="progressbar"
+            aria-label="Animated striped example"
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div
+              class="progress-bar progress-bar-striped progress-bar-animated"
+              style="width: 11%;"
+            ></div>
+          </div>
+        </div>
+        <div class="col-7 d-flex flex-row justify-content-center mt-5">
+          <div>
+            <h2 class="fw-semibold orderDate"></h2>
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@ document.querySelector("button").addEventListener("click", () => {
 
   let exist = false;
   getUserAccount.forEach((element) => {
-    if (input[0].value.toLocaleLowerCase() == element.username) {
+    if (input[0].value.toLocaleLowerCase() == element.username.toLocaleLowerCase()) {
       exist = true;
       document.querySelector(".verify").classList.remove("d-none");
       setTimeout(() => {

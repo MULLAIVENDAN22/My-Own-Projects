@@ -5,7 +5,11 @@ const userAccount = [
     status: false,
   },
 ];
-window.localStorage.setItem("userAccount", JSON.stringify(userAccount));
+
+if(!window.localStorage.getItem("userAccount")){
+  window.localStorage.setItem("userAccount", JSON.stringify(userAccount));
+}
+
 const getUserAccount = JSON.parse(
   window.localStorage.getItem("userAccount" || "[]")
 );
@@ -28,6 +32,15 @@ document.querySelector("button").addEventListener("click", () => {
     return;
   }
 
+  if (
+    input[0].value == userAccount[0].username &&
+    input[1].value == userAccount[0].password
+  ) {
+    getUserAccount[0].status = true;
+    window.localStorage.setItem("userAccount", JSON.stringify(getUserAccount));
+    window.location.href = "./admin/index.html";
+    return;
+  }
   getUserAccount.forEach((element, index) => {
     if (
       input[0].value.toLocaleLowerCase() == element.username &&
