@@ -36,7 +36,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.querySelector(".cardbackImg1").addEventListener("click",()=>{
-  console.log("cardbackc1");
-  
-})

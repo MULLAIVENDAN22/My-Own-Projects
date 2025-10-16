@@ -127,6 +127,9 @@
         background-color: #e9a132 !important;
       }
 
+      .orangec {
+        color: #e9a132;
+      }
       .popp {
         transform: scale(0);
         margin-top: 40px;
@@ -187,6 +190,38 @@
       .swiper-button-next:after,
       .swiper-button-prev:after {
         display: none;
+      }
+
+      .orangebg:hover{
+        background-color: #e9a132 !important;
+      }
+      .orangech:hover{
+        color: #e9a132 !important;
+      }
+      .fullorg:hover {
+        background-color: #e9a132 !important;
+      }
+      .fullorg:hover div:nth-child(1) {
+        color: white !important;
+      }
+
+      .fullorg:hover div:nth-child(2) {
+        background-color: white !important;
+        color: #e9a132 !important;
+      }
+
+      .lscardImg div:nth-of-type(1),
+      .lscardImg div:nth-of-type(2) {
+        transition:
+          background-size 0.3s linear,
+          background-color 0.3s linear;
+      }
+      .lscardImg:hover div:nth-of-type(1) {
+        background-color: rgba(0, 0, 0, 0.561) !important;
+      }
+
+      .lscardImg:hover div:nth-of-type(2) {
+        background-size: 120% !important;
       }
     </style>
     <link
@@ -467,7 +502,7 @@
               class="d-flex flex-column justify-content-center align-items-center mt-5"
             >
               <div
-                class="bg-light mt-5 arrow-left"
+                class="bg-light mt-5 arrow-left orangebg"
                 style="
                   border-radius: 50%;
                   width: 70px;
@@ -476,10 +511,10 @@
                   padding: 18px 6px;
                 "
               >
-                <i class="fa-solid text-dark fa-arrow-left fs-2"></i>
+                <i class="fa-solid text-dark o fa-arrow-left fs-2"></i>
               </div>
               <div
-                class="bg-light mt-3 arrow-right"
+                class="bg-light mt-3 arrow-right orangebg"
                 style="
                   border-radius: 50%;
                   width: 70px;
@@ -929,37 +964,29 @@
           <div class="col-6">
             <div
               class="d-flex flex-row justify-content-end align-items-center mt-5 me-5 position-relative"
-              style="gap: 5%"
+              style="gap: 7%"
             >
-              <div
-                class="bg-light"
-                style="
-                  border-radius: 50%;
-
-                  display: grid;
-                  place-items: center;
-                "
-              >
+              <div>
                 <i
-                  class="fa-solid text-dark bg-light p-4 fa-arrow-left swiper-button-prev position-relative fs-2"
+                  class="fa-solid orangebg text-dark bg-light fa-arrow-left swiper-button-prev position-relative fs-2"
                   style="
+                    height: 60px;
+                    width: 60px;
+                    display: grid;
+                    place-items: center;
                     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                     border-radius: 50%;
                   "
                 ></i>
               </div>
-              <div
-                class="bg-light"
-                style="
-                  border-radius: 50%;
-
-                  display: grid;
-                  place-items: center;
-                "
-              >
+              <div>
                 <i
-                  class="fa-solid text-dark bg-light p-4 fa-arrow-right swiper-button-next fs-2 position-relative"
+                  class="fa-solid orangebg text-dark bg-light fa-arrow-right swiper-button-next fs-2 position-relative"
                   style="
+                    height: 60px;
+                    width: 60px;
+                    display: grid;
+                    place-items: center;
                     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                     border-radius: 50%;
                   "
@@ -968,9 +995,9 @@
             </div>
           </div>
         </div>
-        <div class="row swiper mySwiper">
+        <div class="row swiper mySwiper1">
           <div class="swiper-wrapper">
-             <div
+            <div
               class="swiper-slide"
               style="
                 background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/portfolio_1.jpeg&quot;);
@@ -978,10 +1005,8 @@
                 height: 500px;
                 width: 100%;
               "
-            >
-
-          </div>
-             <div
+            ></div>
+            <div
               class="swiper-slide"
               style="
                 background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/portfolio_2.jpeg&quot;);
@@ -991,7 +1016,7 @@
                 width: 100%;
               "
             ></div>
-             <div
+            <div
               class="swiper-slide"
               style="
                 background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/portfolio_3.jpeg&quot;);
@@ -1001,20 +1026,20 @@
                 width: 100%;
               "
             ></div>
-             <div
+            <div
               class="swiper-slide"
               style="
                 background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/portfolio_4.jpeg&quot;);
                 background-size: cover;
-                
+
                 height: 500px;
                 width: 100%;
               "
             ></div>
-             <div
+            <div
               class="swiper-slide"
               style="
-                background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/portfolio_1.jpeg&quot;);
+                background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/portfolio_3.jpeg&quot;);
                 background-size: cover;
                 height: 500px;
                 width: 100%;
@@ -1026,7 +1051,6 @@
 
           <!-- <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div> -->
-        </div>
         </div>
         <div class="row mt-3 g-0">
           <div
@@ -1149,7 +1173,410 @@
             </div>
           </div>
         </div>
-        
+        <div class="row g-0" style="margin-top: 130px">
+          <div class="col-4">
+            <div class="px-2 ms-4">
+              <h5 class="orangec">Testimonial</h5>
+              <h1 class="fw-bold py-2" style="font-size: 50px">
+                What They’re Saying?
+              </h1>
+              <p class="" style="font-size: 17px; color: rgb(119, 119, 119)">
+                Providing legal advice, contract drafting, compliance
+                assistance, intellectual property protection, and other legal
+                support for businesses.
+              </p>
+              <div
+                class="d-flex flex-row justify-content-start align-items-center position-relative"
+                style="gap: 10%; margin-top: 70px"
+              >
+                <div>
+                  <i
+                    class="fa-solid orangebg text-dark bg-light fa-arrow-left swiper-button-prev position-relative fs-2"
+                    style="
+                      height: 60px;
+                      width: 60px;
+                      display: grid;
+                      place-items: center;
+                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                      border-radius: 50%;
+                    "
+                  ></i>
+                </div>
+                <div>
+                  <i
+                    class="fa-solid orangebg text-dark bg-light fa-arrow-right swiper-button-next fs-2 position-relative"
+                    style="
+                      height: 60px;
+                      width: 60px;
+                      display: grid;
+                      place-items: center;
+                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                      border-radius: 50%;
+                    "
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-8" style="background-color: #fafafa">
+            <div class="row swiper mySwiper2 my-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide py-2">
+                  <div
+                    class="bg-light p-4"
+                    style="
+                      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                      height: 430px;
+                      width: 100%;
+                    "
+                  >
+                    <div>
+                      <img
+                        src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/avatar_1.png"
+                        class="img-fluid"
+                        style="
+                          height: 80px;
+                          width: 80px;
+                          border-radius: 50%;
+                          object-fit: cover;
+                          border: 2px solid rgba(150, 150, 150, 0.9);
+                        "
+                        alt=""
+                      />
+                    </div>
+                    <div class="d-flex flex-row orangec my-2" style="gap: 2%">
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i
+                          class="fa-solid fa-star fs-6"
+                          style="color: #f3c988e0"
+                        ></i>
+                      </div>
+                    </div>
+                    <p
+                      class=""
+                      style="font-size: 16.5px; color: rgb(119, 119, 119)"
+                    >
+                      I've been using [business name] for the past year and I'm
+                      so glad I did. Their products and services are top-notch
+                      and their customer service is amazing. I would highly
+                      recommend them to anyone
+                    </p>
+                    <h5 class="fw-bold text-dark">Darlene Robertson</h5>
+                    <h6 class="" style="color: rgb(119, 119, 119)">
+                      Web design
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide py-2">
+                  <div
+                    class="bg-light p-4"
+                    style="
+                      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                      height: 430px;
+                      width: 100%;
+                    "
+                  >
+                    <div>
+                      <img
+                        src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/avatar_2.png"
+                        class="img-fluid"
+                        style="
+                          height: 80px;
+                          width: 80px;
+                          border-radius: 50%;
+                          object-fit: cover;
+                          border: 2px solid rgba(150, 150, 150, 0.9);
+                        "
+                        alt=""
+                      />
+                    </div>
+                    <div class="d-flex flex-row orangec my-2" style="gap: 2%">
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i
+                          class="fa-solid fa-star fs-6"
+                          style="color: #f3c988e0"
+                        ></i>
+                      </div>
+                    </div>
+                    <p
+                      class=""
+                      style="font-size: 16.5px; color: rgb(119, 119, 119)"
+                    >
+                      I've been using [business name] for the past year and I'm
+                      so glad I did. Their products and services are top-notch
+                      and their customer service is amazing. I would highly
+                      recommend them to anyone
+                    </p>
+                    <h5 class="fw-bold text-dark">Max Lawrence</h5>
+                    <h6 class="" style="color: rgb(119, 119, 119)">
+                      Web design
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide py-2">
+                  <div
+                    class="bg-light p-4"
+                    style="
+                      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                      height: 430px;
+                      width: 100%;
+                    "
+                  >
+                    <div>
+                      <img
+                        src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/avatar_3.png"
+                        class="img-fluid"
+                        style="
+                          height: 80px;
+                          width: 80px;
+                          border-radius: 50%;
+                          object-fit: cover;
+                          border: 2px solid rgba(150, 150, 150, 0.9);
+                        "
+                        alt=""
+                      />
+                    </div>
+                    <div class="d-flex flex-row orangec my-2" style="gap: 2%">
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i
+                          class="fa-solid fa-star fs-6"
+                          style="color: #f3c988e0"
+                        ></i>
+                      </div>
+                    </div>
+                    <p
+                      class=""
+                      style="font-size: 16.5px; color: rgb(119, 119, 119)"
+                    >
+                      I've been using [business name] for the past year and I'm
+                      so glad I did. Their products and services are top-notch
+                      and their customer service is amazing. I would highly
+                      recommend them to anyone
+                    </p>
+                    <h5 class="fw-bold text-dark">Carol McCathey</h5>
+                    <h6 class="" style="color: rgb(119, 119, 119)">
+                      Web design
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide py-2">
+                  <div
+                    class="bg-light p-4"
+                    style="
+                      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                      height: 430px;
+                      width: 100%;
+                    "
+                  >
+                    <div>
+                      <img
+                        src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/avatar_4.png"
+                        class="img-fluid"
+                        style="
+                          height: 80px;
+                          width: 80px;
+                          border-radius: 50%;
+                          object-fit: cover;
+                          border: 2px solid rgba(150, 150, 150, 0.9);
+                        "
+                        alt=""
+                      />
+                    </div>
+                    <div class="d-flex flex-row orangec my-2" style="gap: 2%">
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i
+                          class="fa-solid fa-star fs-6"
+                          style="color: #f3c988e0"
+                        ></i>
+                      </div>
+                    </div>
+                    <p
+                      class=""
+                      style="font-size: 16.5px; color: rgb(119, 119, 119)"
+                    >
+                      I've been using [business name] for the past year and I'm
+                      so glad I did. Their products and services are top-notch
+                      and their customer service is amazing. I would highly
+                      recommend them to anyone
+                    </p>
+                    <h5 class="fw-bold text-dark">Peter Jhonson</h5>
+                    <h6 class="" style="color: rgb(119, 119, 119)">
+                      Web design
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide py-2">
+                  <div
+                    class="bg-light p-4"
+                    style="
+                      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                      height: 430px;
+                      width: 100%;
+                    "
+                  >
+                    <div>
+                      <img
+                        src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/avatar_5.png"
+                        class="img-fluid"
+                        style="
+                          height: 80px;
+                          width: 80px;
+                          border-radius: 50%;
+                          object-fit: cover;
+                          border: 2px solid rgba(150, 150, 150, 0.9);
+                        "
+                        alt=""
+                      />
+                    </div>
+                    <div class="d-flex flex-row orangec my-2" style="gap: 2%">
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i
+                          class="fa-solid fa-star fs-6"
+                          style="color: #f3c988e0"
+                        ></i>
+                      </div>
+                    </div>
+                    <p
+                      class=""
+                      style="font-size: 16.5px; color: rgb(119, 119, 119)"
+                    >
+                      I've been using [business name] for the past year and I'm
+                      so glad I did. Their products and services are top-notch
+                      and their customer service is amazing. I would highly
+                      recommend them to anyone
+                    </p>
+                    <h5 class="fw-bold text-dark">Max Lawrence</h5>
+                    <h6 class="" style="color: rgb(119, 119, 119)">
+                      Web design
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide py-2">
+                  <div
+                    class="bg-light p-4"
+                    style="
+                      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                      height: 430px;
+                      width: 100%;
+                    "
+                  >
+                    <div>
+                      <img
+                        src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/avatar_6.png"
+                        class="img-fluid"
+                        style="
+                          height: 80px;
+                          width: 80px;
+                          border-radius: 50%;
+                          object-fit: cover;
+                          border: 2px solid rgba(150, 150, 150, 0.9);
+                        "
+                        alt=""
+                      />
+                    </div>
+                    <div class="d-flex flex-row orangec my-2" style="gap: 2%">
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-star fs-6"></i>
+                      </div>
+                      <div>
+                        <i
+                          class="fa-solid fa-star fs-6"
+                          style="color: #f3c988e0"
+                        ></i>
+                      </div>
+                    </div>
+                    <p
+                      class=""
+                      style="font-size: 16.5px; color: rgb(119, 119, 119)"
+                    >
+                      I've been using [business name] for the past year and I'm
+                      so glad I did. Their products and services are top-notch
+                      and their customer service is amazing. I would highly
+                      recommend them to anyone
+                    </p>
+                    <h5 class="fw-bold text-dark">Carol McCathey</h5>
+                    <h6 class="" style="color: rgb(119, 119, 119)">
+                      Web design
+                    </h6>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pagination + Navigation -->
+
+              <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+            </div>
+          </div>
         </div>
         <div class="row" style="margin-top: 130px">
           <div class="col-12 text-center">
@@ -1240,7 +1667,7 @@
                 </div>
               </div>
             </div>
-           <div class="col-4 position-relative">
+            <div class="col-4 position-relative">
               <div
                 class="position-absolute cardback1"
                 style="
@@ -1555,6 +1982,364 @@
             </div>
           </div>
         </div>
+        <div class="container">
+          <div class="row" style="margin-top: 50px">
+            <div class="col-12">
+              <div class="">
+                <div class="row swiper mySwiper3 my-4">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div>
+                        <img
+                          src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/brand_1-2.svg"
+                          class="img-fluid"
+                          style="height: 40px; width: auto"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div>
+                        <img
+                          src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/brand_2-2.svg"
+                          class="img-fluid"
+                          style="height: 40px; width: auto"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div>
+                        <img
+                          src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/brand_5-2.svg"
+                          class="img-fluid"
+                          style="height: 40px; width: auto"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div>
+                        <img
+                          src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/brand_3-2.svg"
+                          class="img-fluid"
+                          style="height: 40px; width: auto"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div>
+                        <img
+                          src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/brand_2-2.svg"
+                          class="img-fluid"
+                          style="height: 40px; width: auto"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div>
+                        <img
+                          src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/brand_5-2.svg"
+                          class="img-fluid"
+                          style="height: 40px; width: auto"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div>
+                        <img
+                          src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/brand_3-2.svg"
+                          class="img-fluid"
+                          style="height: 40px; width: auto"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div>
+                        <img
+                          src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/brand_1-2.svg"
+                          class="img-fluid"
+                          style="height: 40px; width: auto"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 70px">
+            <div class="col-12">
+              <div class="text-center">
+                <h5 class="orangec">Meet Our Team Member</h5>
+                <h1 class="fw-bold" style="font-size: 50px">
+                  Find Out Latest News <br />
+                  and Articles
+                </h1>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row mt-5">
+                <div class="col-4">
+                  <div
+                    class="position-relative"
+                    style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+                  >
+                    <div class="lscardImg">
+                      <div
+                        class="position-absolute"
+                        style="
+                          z-index: 2;
+                          background-color: rgba(0, 0, 0, 0);
+                          height: 405px;
+                          width: 100%;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/post_1-2-355x345.jpeg&quot;);
+                          height: 405px;
+                          width: 100%;
+                          background-size: 100%;
+                        "
+                      ></div>
+                    </div>
+                    <div class="px-4">
+                      <div class="d-flex flex-row justify-content-between mt-3">
+                        <div class="d-flex flex-row" style="font-size: 14px">
+                          <i class="fa-solid fa-user orangec mt-1"></i>
+                          <p class="ms-1">
+                            By: <span class="orangech"> bizmax</span>
+                          </p>
+                        </div>
+                        <div class="d-flex flex-row" style="font-size: 14px">
+                          <i class="fa-solid fa-calendar-days orangec mt-1"></i>
+                          <p class="ms-1">July 30, 2023</p>
+                        </div>
+                        <div class="d-flex flex-row" style="font-size: 14px">
+                          <i class="fa-solid fa-comment orangec mt-1"></i>
+                          <p class="orangech ms-1">0 comments</p>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 class="fw-bold orangech">
+                          Introducing the latest tech features for you
+                        </h4>
+                        <p style="color: rgb(119, 119, 119)">
+                          What services does your business provide? There are
+                          many variations of passages of Lorem Ipsum
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="w-100 py-2 mt-4 px-4 d-flex flex-row justify-content-between align-items-center fullorg"
+                      style="background-color: rgba(217, 217, 217, 0.307)"
+                    >
+                      <div class="mt-1">
+                        <h6>Read More</h6>
+                      </div>
+                      <div
+                        class="rarrow"
+                        style="
+                          height: 30px;
+                          width: 30px;
+                          background-color: #e9a132;
+                          color: white;
+                          border-radius: 50%;
+                          display: grid;
+                          place-items: center;
+                        "
+                      >
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          style="font-size: 14px"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div
+                    class="position-relative"
+                    style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+                  >
+                    <div class="lscardImg">
+                      <div
+                        class="position-absolute"
+                        style="
+                          z-index: 2;
+                          background-color: rgba(0, 0, 0, 0);
+                          height: 405px;
+                          width: 100%;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/post_7-2-355x345.jpeg&quot;);
+                          height: 405px;
+                          width: 100%;
+                          background-size: 100%;
+                        "
+                      ></div>
+                    </div>
+                   <div class="px-4">
+                      <div class="d-flex flex-row justify-content-between mt-3">
+                        <div class="d-flex flex-row" style="font-size: 14px">
+                          <i class="fa-solid fa-user orangec mt-1"></i>
+                          <p class="ms-1">
+                            By: <span class="orangech"> bizmax</span>
+                          </p>
+                        </div>
+                        <div class="d-flex flex-row" style="font-size: 14px">
+                          <i class="fa-solid fa-calendar-days orangec mt-1"></i>
+                          <p class="ms-1">July 30, 2023</p>
+                        </div>
+                        <div class="d-flex flex-row" style="font-size: 14px">
+                          <i class="fa-solid fa-comment orangec mt-1"></i>
+                          <p class="orangech ms-1">0 comments</p>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 class="fw-bold orangech">
+                          Introducing the latest tech features for you
+                        </h4>
+                        <p style="color: rgb(119, 119, 119)">
+                          What services does your business provide? There are
+                          many variations of passages of Lorem Ipsum
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="w-100 py-2 mt-4 px-4 d-flex flex-row justify-content-between align-items-center fullorg"
+                      style="background-color: rgba(217, 217, 217, 0.307)"
+                    >
+                      <div class="mt-1">
+                        <h6>Read More</h6>
+                      </div>
+                      <div
+                        class="rarrow"
+                        style="
+                          height: 30px;
+                          width: 30px;
+                          background-color: #e9a132;
+                          color: white;
+                          border-radius: 50%;
+                          display: grid;
+                          place-items: center;
+                        "
+                      >
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          style="font-size: 14px"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div
+                    class="position-relative"
+                    style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+                  >
+                    <div class="lscardImg">
+                      <div
+                        class="position-absolute"
+                        style="
+                          z-index: 2;
+                          background-color: rgba(0, 0, 0, 0);
+                          height: 405px;
+                          width: 100%;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/post_3-2-355x345.jpeg&quot;);
+                          height: 405px;
+                          width: 100%;
+                          background-size: 100%;
+                        "
+                      ></div>
+                    </div>
+                     <div class="px-4">
+                      <div class="d-flex flex-row justify-content-between mt-3">
+                        <div class="d-flex flex-row" style="font-size: 14px">
+                          <i class="fa-solid fa-user orangec mt-1"></i>
+                          <p class="ms-1">
+                            By: <span class="orangech"> bizmax</span>
+                          </p>
+                        </div>
+                        <div class="d-flex flex-row" style="font-size: 14px">
+                          <i class="fa-solid fa-calendar-days orangec mt-1"></i>
+                          <p class="ms-1">July 30, 2023</p>
+                        </div>
+                        <div class="d-flex flex-row" style="font-size: 14px">
+                          <i class="fa-solid fa-comment orangec mt-1"></i>
+                          <p class="orangech ms-1">0 comments</p>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 class="fw-bold orangech">
+                          Introducing the latest tech features for you
+                        </h4>
+                        <p style="color: rgb(119, 119, 119)">
+                          What services does your business provide? There are
+                          many variations of passages of Lorem Ipsum
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="w-100 py-2 mt-4 px-4 d-flex flex-row justify-content-between align-items-center fullorg"
+                      style="background-color: rgba(217, 217, 217, 0.307)"
+                    >
+                      <div class="mt-1">
+                        <h6>Read More</h6>
+                      </div>
+                      <div
+                        class="rarrow"
+                        style="
+                          height: 30px;
+                          width: 30px;
+                          background-color: #e9a132;
+                          color: white;
+                          border-radius: 50%;
+                          display: grid;
+                          place-items: center;
+                        "
+                      >
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          style="font-size: 14px"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 70px"></div>
+        </div>
+        <div
+          class="row"
+          style="
+            margin-top: 70px;
+            background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/footer_bg-2.jpeg&quot;);
+            background-size: cover;
+          "
+        ></div>
       </div>
     </div>
     <script
@@ -1567,9 +2352,43 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      var swiper = new Swiper(".mySwiper", {
+      var swiper1 = new Swiper(".mySwiper1", {
         slidesPerView: 4,
         spaceBetween: 0,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 3,
+        spaceBetween: 35,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+      var swiper3 = new Swiper(".mySwiper3", {
+        slidesPerView: 5,
+        spaceBetween: 40,
         loop: true,
         pagination: {
           el: ".swiper-pagination",
@@ -1587,58 +2406,3 @@
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-<div class="row g-0 swiper mySwiper">
-          <div class="col-12 swiper-wrapper">
-            <div
-              class="swiper-slide"
-              style="
-                background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/portfolio_1.jpeg&quot;);
-                background-size: cover;
-                height: 500px;
-                width: 100%;
-              "
-            ></div>
-            <div
-              class="swiper-slide"
-              style="
-                background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/portfolio_2.jpeg&quot;);
-                background-size: cover;
-                height: 500px;
-                width: 100%;
-              "
-            ></div>
-            <div
-              class="swiper-slide"
-              style="
-                background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/portfolio_4.jpeg&quot;);
-                background-size: cover;
-                height: 500px;
-                width: 100%;
-              "
-            ></div>
-            <div
-              class="swiper-slide"
-              style="
-                background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/portfolio_4.jpeg&quot;);
-                background-size: cover;
-                height: 500px;
-                width: 100%;
-              "
-            ></div>
-           
-            
-          </div>
-        </div> -->
