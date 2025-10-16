@@ -36,11 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-var splide = new Splide( '.splide', {
-  type   : 'loop',
-  perPage: 4,
-  perMove: 1,
-} );
-
-splide.mount();
+document.querySelector(".cardbackImg1").addEventListener("click",()=>{
+  console.log("cardbackc1");
+  
+})
