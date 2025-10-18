@@ -48,7 +48,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/MULLAIVENDAN22/neoiconTasks/customized_bootstrap.css?latest"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title></title>
     <style>
       * {
@@ -123,7 +128,16 @@
         background-color: #e9a132 !important;
       }
 
-      .col-4:hover .cardback1 {
+      .col-lg-4:hover .cardback1 {
+        background-color: #e9a132 !important;
+      }
+      .col-vs-4:hover .cardback1 {
+        background-color: #e9a132 !important;
+      }
+      .col-sm-4:hover .cardback1 {
+        background-color: #e9a132 !important;
+      }
+      .col-md-4:hover .cardback1 {
         background-color: #e9a132 !important;
       }
 
@@ -138,7 +152,19 @@
           transform 0.5s linear;
       }
 
-      .col-4:hover .popp {
+      .col-lg-4:hover .popp {
+        transform: scale(1);
+        margin-bottom: 60px;
+      }
+      .col-sm-4:hover .popp {
+        transform: scale(1);
+        margin-bottom: 60px;
+      }
+      .col-vs-4:hover .popp {
+        transform: scale(1);
+        margin-bottom: 60px;
+      }
+      .col-md-4:hover .popp {
         transform: scale(1);
         margin-bottom: 60px;
       }
@@ -192,10 +218,10 @@
         display: none;
       }
 
-      .orangebg:hover{
+      .orangebg:hover {
         background-color: #e9a132 !important;
       }
-      .orangech:hover{
+      .orangech:hover {
         color: #e9a132 !important;
       }
       .fullorg:hover {
@@ -224,28 +250,38 @@
         background-size: 120% !important;
       }
     </style>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/MULLAIVENDAN22/neoiconTasks/customized_bootstrap.css?latest"
-    />
   </head>
   <body>
-    <div class="container-fluid p-0 m-0 position-relative">
+    <div
+      class="container-fluid p-0 m-0 position-relative"
+      style="box-sizing: border-box"
+    >
       <div class="position-absolute" style="overflow: hidden; z-index: -1">
         <img
           src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/hero_slider_1.jpeg"
           alt=""
           class="img-fluid backImg"
           srcset=""
-          style="height: 100vh; width: 100vw"
+          style="
+            height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
+            object-fit: cover;
+          "
         />
       </div>
-      <header>
+      <header style="box-sizing: border-box">
         <div
           class="d-flex flex-row justify-content-between text-light px-3"
-          style="background-color: #1d1e20; font-size: 14px"
+          style="
+            background-color: #1d1e20;
+            font-size: 14px;
+            box-sizing: border-box;
+          "
         >
-          <div class="d-flex flex-row py-2 mt-2">
+          <div
+            class="d-lg-flex d-md-flex flex-row d-vs-none d-sm-none py-2 mt-2"
+          >
             <h6 class="fw-semibold" style="font-size: 14px">
               Address:
               <a
@@ -266,23 +302,36 @@
               </a>
             </h6>
           </div>
-          <div class="py-2 mt-1">
-            <a href="" class="fw-medium text-decoration-none text-light"
+          <div
+            class="py-2 mt-1 d-sm-flex d-vs-flex justify-content-vs-center justify-content-sm-center text-vs-center text-sm-center text-vs-center w-vs-100 w-sm-100"
+          >
+            <a
+              href=""
+              class="fw-medium text-decoration-none orangech text-sm-center text-vs-center text-light"
               >Help</a
             >
-            <span class="text-secondary ms-2">/</span>
-            <a href="" class="fw-medium text-decoration-none text-light ms-2"
+            <span class="text-secondary ms-2 text-sm-center text-vs-center"
+              >/</span
+            >
+            <a
+              href=""
+              class="fw-medium orangech text-decoration-none text-light ms-2"
               >Support</a
             >
-            <span class="text-secondary ms-2">/</span>
-            <a href="" class="fw-medium text-decoration-none text-light ms-2">
+            <span class="text-secondary ms-2 text-sm-center text-vs-center"
+              >/</span
+            >
+            <a
+              href=""
+              class="fw-medium orangech text-decoration-none text-light ms-2"
+            >
               Contact</a
             >
           </div>
         </div>
         <nav
           class="navbar navbar-dark py-3 navbar-expand-lg px-3"
-          style="background-color: #1d1e20c6"
+          style="background-color: #1d1e20c6; box-sizing: border-box"
         >
           <a
             class="navbar-brand fs-3 me-5 fw-bolder"
@@ -448,7 +497,9 @@
               </li>
             </ul>
           </div>
-          <div class="ms-auto d-flex flex-row align-items-center cursor me-2">
+          <div
+            class="ms-auto d-sm-none d-vs-none d-flex flex-row align-items-center cursor me-2"
+          >
             <div>
               <i
                 class="fa-solid fa-magnifying-glass fs-2"
@@ -473,18 +524,24 @@
         </nav>
       </header>
       <div class="container-fluid p-0 m-0" style="box-sizing: border-box">
-        <div
-          class="row pt-5 text-light"
-          style="background-color: #1d1e208f; height: 555px"
-        >
-          <div class="col-8 my-5">
-            <div class="ms-5">
-              <h4 class="fw-normal">This week only for world premier</h4>
-              <h1 class="fw-bold" style="font-size: 60px">
+        <div class="row pt-5 text-light" style="background-color: #1d1e208f">
+          <div class="col-lg-8 col-mg-8 col-12 col-sm-12 my-5">
+            <div
+              class="ms-lg-5 ms-md-5 mt-sm-3 mt-vs-3 ms-vs-3 ms-sm-3 my-lg-5 my-md-5 my-vs-5 my-sm-5"
+            >
+              <p
+                class="fw-lg-normal fw-md-normal fs-vs-19 fs-sm-19 fs-lg-27 fs-md-27 fw-sm-lighter fw-vs-lighter"
+              >
+                This week only for world premier
+              </p>
+              <h1 class="fw-bold fs-lg-60 fs-md-60 fs-vs-45 fs-sm-45">
                 Inventive and interested <br />
                 in innovation
               </h1>
-              <p class="fw-normal fs-5 mt-3" style="width: 80%">
+              <p
+                class="fw-normal fs-lg-5 fs-md-5 fs-vs-15 fs-sm-15 mt-3"
+                style="width: 80%"
+              >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
                 nobis tenetur laborum praesentium rerum nostrum inventore
                 sapiente nobis tenetur laborum praesentium rerum
@@ -495,11 +552,42 @@
               >
                 Get A Quote
               </button>
+              <div
+                class="d-flex flex-row justify-content-center d-lg-none d-md-none align-items-center mt-5"
+                style="gap: 5%"
+              >
+                <div
+                  class="bg-light arrow-left orangebg"
+                  style="
+                    border-radius: 50%;
+                    height: 70px;
+                    width: 70px;
+                    display: grid;
+                    place-items: center;
+                    padding: 18px 6px;
+                  "
+                >
+                  <i class="fa-solid text-dark o fa-arrow-left fs-2"></i>
+                </div>
+                <div
+                  class="bg-light arrow-right orangebg"
+                  style="
+                    border-radius: 50%;
+                    height: 70px;
+                    width: 70px;
+                    display: grid;
+                    place-items: center;
+                    padding: 18px 6px;
+                  "
+                >
+                  <i class="fa-solid text-dark fa-arrow-right fs-2"></i>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-4 my-5">
+          <div class="col-lg-4 col-md-4 my-lg-5 my-md-5">
             <div
-              class="d-flex flex-column justify-content-center align-items-center mt-5"
+              class="flex-column d-vs-none d-sm-none d-lg-flex d-md-flex justify-content-center align-items-center mt-5"
             >
               <div
                 class="bg-light mt-5 arrow-left orangebg"
@@ -553,19 +641,21 @@
           </div>
         </div>
         <div class="row mt-5">
-          <div class="col-6">
-            <div class="px-5 py-3">
+          <div class="col-lg-6 col-md-6 col-12 col-sm-12">
+            <div class="px-lg-5 px-md-5 px-vs-3 px-sm-3 py-lg-3 py-md-3">
               <h5 class="fw-normal" style="color: rgb(227, 147, 27)">
                 Our Service List
               </h5>
-              <h1 class="fw-bold mt-2" style="font-size: 50px">
+              <h1 class="fw-bold fs-lg-40 fs-md-40 fs-vs-37 fs-sm-47 mt-2">
                 We Provide The Solution For Our Clients
               </h1>
             </div>
           </div>
-          <div class="col-6">
-            <div class="p-5 mt-2">
-              <p class="" style="color: rgb(140, 140, 140); font-size: 20px">
+          <div class="col-lg-6 col-md-6 col-12 col-sm-12">
+            <div
+              class="p-lg-5 p-md-5 px-vs-3 px-sm-3 mt-2 fs-lg-20 fs-md-20 fs-vs-17"
+            >
+              <p class="" style="color: rgb(140, 140, 140)">
                 I have been a loyal customer of this auto parts company for
                 years and I cannot recommend them enough. Their extensive
                 selection of high-quality parts and accessories.
@@ -574,8 +664,10 @@
           </div>
         </div>
         <div class="container">
-          <div class="row mt-3">
-            <div class="col-3">
+          <div class="row mt-lg-3 mt-md-3 mt-sm-5 mt-vs-5">
+            <div data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="1300" class="col-lg-3 col-md-3 col-sm-12 col-12">
               <div class="card p-3 position-relative">
                 <div class="d-flex flex-row" style="gap: 10%">
                   <div>
@@ -625,7 +717,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div data-aos="fade-right"
+     data-aos-easing="linear"
+     data-aos-duration="1300" class="col-lg-3 col-md-3 col-sm-12 col-12 mt-sm-4 mt-vs-4 mt-lg-0 mt-md-0">
               <div class="card p-3 position-relative">
                 <div class="d-flex flex-row" style="gap: 10%">
                   <div>
@@ -675,7 +769,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="1300" class="col-lg-3 col-md-3 col-sm-12 col-12 mt-sm-4 mt-vs-4 mt-lg-0 mt-md-0">
               <div class="card p-3 position-relative">
                 <div class="d-flex flex-row" style="gap: 10%">
                   <div>
@@ -725,7 +821,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div data-aos="fade-right"
+     data-aos-easing="linear"
+     data-aos-duration="1300" class="col-lg-3 col-md-3 col-sm-12 col-12 mt-sm-4 mt-vs-4 mt-lg-0 mt-md-0">
               <div class="card p-3 position-relative">
                 <div class="d-flex flex-row" style="gap: 10%">
                   <div>
@@ -774,14 +872,18 @@
               </div>
             </div>
           </div>
-          <div class="row" style="margin: 90px 0">
+          <div class="row mt-5">
             <div class="col-12">
-              <div class="d-flex flex-row justify-content-center">
-                <h4>
-                  Digital agency services built specifically for your business
-                </h4>
+              <div
+                class="d-flex flex-lg-row flex-md-row flex-vs-column flex-sm-column justify-content-center align-vs-items-center align-sm-items-center mt-lg-5 mt-md-5"
+              >
+                <div class="">
+                  <h4 class="ms-vs-4 ms-sm-4">
+                    Digital agency services built specifically for your business
+                  </h4>
+                </div>
                 <button
-                  class="btn text-light ms-5 fw-medium px-3"
+                  class="btn text-light mt-lg-0 mt-md-0 ms-5 fw-medium px-4 w-vs-70 mt-vs-3 mt-sm-3"
                   style="
                     background-color: rgb(232, 131, 58);
                     border-radius: 18px;
@@ -792,179 +894,201 @@
               </div>
             </div>
           </div>
-          <div class="row" style="margin-top: 150px">
-            <div class="col-6 position-relative">
-              <div
-                class="position-absolute"
-                style="
-                  height: 300px !important;
-                  width: 250px;
-                  background-color: rgba(225, 225, 225, 0.656);
-                  border-radius: 15px;
-                  z-index: -1;
-                "
-              ></div>
-              <div class="ms-5 mt-5">
-                <img
-                  src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/experience_img.jpeg"
-                  class="img-fluid"
-                  height="200px"
-                  alt=""
-                  srcset=""
-                  width="400"
-                  style="border-radius: 10px; object-fit: cover"
-                />
-              </div>
-              <div
-                class="position-absolute moving1"
-                style="z-index: -1; bottom: -10px; left: 200px"
-              >
-                <img
-                  class="img-fluid"
-                  src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/experience_shape_1.png"
-                  alt=""
-                  style="height: 160px"
-                />
-              </div>
-              <div
-                class="position-absolute text-light text-center p-3 bg-light"
-                style="z-index: 2; top: 250px; right: 70px"
-              >
+          <div class="row mt-lg-5 mt-md-5 pt-lg-5 pt-md-5 mt-vs-4 mt-sm-4">
+            <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500" class="col-lg-6 col-md-6 col-12 col-sm-12 position-relative">
+              <div class="mt-lg-5 pt-lg-2 mt-md-5 pt-md-2">
                 <div
-                  class="d-flex flex-column justify-content-center align-items-center"
+                  class="position-absolute"
                   style="
-                    height: 300px;
+                    height: 300px !important;
                     width: 250px;
-                    background: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/experience_bg.jpeg&quot;);
+                    background-color: rgba(225, 225, 225, 0.656);
                     border-radius: 15px;
-                    background-position: 70% 10%;
-                    background-size: 105%;
+                    z-index: -1;
                   "
+                ></div>
+                <div
+                  class="ms-lg-5 ms-md-5 ms-vs-4 ms-sm-5 mt-5 pt-vs-4 pt-sm-4"
                 >
-                  <div>
-                    <i class="fa-solid fa-medal fs-1"></i>
-                  </div>
-                  <div class="mt-2">
-                    <h1 class="fw-bold" style="font-size: 60px">40 +</h1>
-                    <h6 class="fw-medium" style="letter-spacing: 3px">
-                      Work Experience
-                    </h6>
+                  <img
+                    src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/experience_img.jpeg"
+                    class="img-fluid"
+                    height="200px"
+                    alt=""
+                    srcset=""
+                    width="400"
+                    style="border-radius: 10px; object-fit: cover"
+                  />
+                </div>
+                <div
+                  class="position-absolute moving1 shakee-vs shakee-sm shakee-md shakee-lg w-100"
+                  style="z-index: -1"
+                >
+                  <img
+                    class="img-fluid"
+                    src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/experience_shape_1.png"
+                    alt=""
+                    style="height: 160px"
+                  />
+                </div>
+                <div
+                  class="position-absolute text-light text-center p-3 bg-light imgabmedal-sm imgabmedal-vs imgabmedal-md imgabmedal-lg"
+                  style="z-index: 2"
+                >
+                  <div
+                    class="d-flex flex-column justify-content-center align-items-center"
+                    style="
+                      height: 300px;
+                      width: 250px;
+                      background: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/experience_bg.jpeg&quot;);
+                      border-radius: 15px;
+                      background-position: 70% 10%;
+                      background-size: 105%;
+                    "
+                  >
+                    <div>
+                      <i class="fa-solid fa-medal fs-1"></i>
+                    </div>
+                    <div class="mt-2">
+                      <h1 class="fw-bold" style="font-size: 60px">40 +</h1>
+                      <h6 class="fw-medium" style="letter-spacing: 3px">
+                        Work Experience
+                      </h6>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-6 position-relative">
-              <div
-                class="position-absolute shake"
-                style="z-index: -1; top: -130px; right: 0px"
-              >
-                <img
-                  src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/08/section-shape-1.png"
-                  class="img-fluid"
-                  style="height: 200px"
-                  alt=""
-                  srcset=""
-                />
-              </div>
-              <div>
-                <h5 style="color: #e9a132">About Us</h5>
-                <h1 class="fw-bold" style="font-size: 50px">
-                  Get Ready for Success with
-                  <span class="" style="color: #e9a132">Bizmax</span> Your Path
-                  to Growth.
-                </h1>
-                <p style="color: rgb(140, 140, 140); font-size: 18px">
-                  Providing legal advice, contract drafting, compliance
-                  assistance, intellectual property protection, and other legal
-                  support for businesses. Creating visual content, such as
-                  logos, brochures, infographics, and other branding materials.
-                </p>
-              </div>
-              <div>
-                <div class="d-flex justify-content-between">
-                  <h5 class="fw-bold">Web development</h5>
-                  <p>90%</p>
-                </div>
+            <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
+              class="col-lg-6 col-md-6 col-12 col-sm-12 position-relative margin-top"
+            >
+              <div class="mt-lg-5 pt-lg-2 mt-md-5 pt-md-2">
                 <div
-                  class="progress"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="90"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
+                  class="position-absolute shake"
+                  style="z-index: -1; top: -60px; right: 0px"
                 >
+                  <img
+                    src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/08/section-shape-1.png"
+                    class="img-fluid"
+                    style="height: 200px"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <div class="px-vs-2 px-sm-2">
+                  <h5 style="color: #e9a132">About Us</h5>
+                  <h1 class="fw-bold fs-lg-50 fs-md-50 fs-vs-35">
+                    Get Ready for Success with
+                    <span class="" style="color: #e9a132">Bizmax</span> Your
+                    Path to Growth.
+                  </h1>
+                  <p
+                    class="mt-vs-3 mt-sm-3"
+                    style="color: rgb(140, 140, 140); font-size: 18px"
+                  >
+                    Providing legal advice, contract drafting, compliance
+                    assistance, intellectual property protection, and other
+                    legal support for businesses. Creating visual content, such
+                    as logos, brochures, infographics, and other branding
+                    materials.
+                  </p>
+                </div>
+                <div class="px-vs-2 px-sm-2 mt-vs-3 mt-sm-3">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="fw-bold">Web development</h5>
+                    <p>90%</p>
+                  </div>
                   <div
-                    class="progress-bar"
-                    style="width: 90%; background-color: #e9a132"
-                  ></div>
-                </div>
-              </div>
-              <div class="row mt-4">
-                <div class="col-6 d-flex flex-column">
-                  <div class="d-flex flex-row">
-                    <p class="">
-                      <i
-                        class="fa-solid fa-angles-right p-2 fs-4 text-light"
-                        style="background-color: #e9a132; border-radius: 50%"
-                      ></i>
-                    </p>
-                    <h5 class="fw-bold ms-3">Accounting and Bookkeeping</h5>
-                  </div>
-                  <p
-                    class="mt-2"
-                    style="color: rgb(140, 140, 140); font-size: 16px"
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
                   >
-                    Services related to financial record-keeping, bookkeeping.
-                  </p>
-                </div>
-                <div class="col-6 d-flex flex-column">
-                  <div class="d-flex flex-row">
-                    <p class="">
-                      <i
-                        class="fa-solid fa-angles-right p-2 fs-4 text-light"
-                        style="background-color: #e9a132; border-radius: 50%"
-                      ></i>
-                    </p>
-                    <h5 class="fw-bold ms-3">
-                      Human Resources (HR) Consulting
-                    </h5>
+                    <div
+                      class="progress-bar"
+                      style="width: 90%; background-color: #e9a132"
+                    ></div>
                   </div>
-                  <p
-                    class="mt-2"
-                    style="color: rgb(140, 140, 140); font-size: 16px"
-                  >
-                    Assistance with HR-related tasks such as recruitment.
-                  </p>
                 </div>
-              </div>
-              <div class="mt-2">
-                <button
-                  class="btn text-light mt-2 fw-medium px-3"
-                  style="background-color: #e9a132"
-                >
-                  Get A Quote
-                </button>
+                <div class="row mt-4 px-vs-2 px-sm-2">
+                  <div
+                    class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex flex-column mt-vs-3 mt-sm-3"
+                  >
+                    <div class="d-flex flex-row">
+                      <p class="">
+                        <i
+                          class="fa-solid fa-angles-right p-2 fs-lg-4 fs-md-4 fs-vs-6 fs-sm-6 text-light"
+                          style="background-color: #e9a132; border-radius: 50%"
+                        ></i>
+                      </p>
+                      <h5 class="fw-bold ms-3 fs-vs-6">
+                        Accounting and Bookkeeping
+                      </h5>
+                    </div>
+                    <p
+                      class="mt-2"
+                      style="color: rgb(140, 140, 140); font-size: 16px"
+                    >
+                      Services related to financial record-keeping, bookkeeping.
+                    </p>
+                  </div>
+                  <div
+                    class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex flex-column mt-vs-3 mt-sm-3"
+                  >
+                    <div class="d-flex flex-row">
+                      <p class="">
+                        <i
+                          class="fa-solid fa-angles-right p-2 fs-lg-4 fs-md-4 fs-vs-6 fs-sm-6 text-light"
+                          style="background-color: #e9a132; border-radius: 50%"
+                        ></i>
+                      </p>
+                      <h5 class="fw-bold ms-3 fs-vs-6">
+                        Human Resources (HR) Consulting
+                      </h5>
+                    </div>
+                    <p
+                      class="mt-2"
+                      style="color: rgb(140, 140, 140); font-size: 16px"
+                    >
+                      Assistance with HR-related tasks such as recruitment.
+                    </p>
+                  </div>
+                </div>
+                <div class="mt-2 d-vs-flex justify-content-vs-center">
+                  <button
+                    class="btn text-light mt-2 fw-medium px-3"
+                    style="background-color: #e9a132"
+                  >
+                    Get A Quote
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div
-          class="row mt-5 px-5"
-          style="background-color: #f2f3f7; padding: 130px 0 60px 0"
-        >
-          <div class="col-6">
+        <div class="row mt-5 px-5 py-5" style="background-color: #f2f3f7">
+          <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500" class="col-lg-6 col-md-6 col-12 col-sm-12">
             <h6 style="color: #e9a132">Our Latest Project</h6>
             <h1
-              class="fw-bold text-dark mt-3"
-              style="font-size: 45px; width: 80%"
+              class="fw-bold text-dark mt-3 w-lg-80 w-md-80 fs-lg-45 fs-md-45 fs-vs-40"
             >
               Take a look our Completed Projects
             </h1>
           </div>
-          <div class="col-6">
+          <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500" class="col-lg-6 col-md-6 col-12 col-sm-12">
             <div
-              class="d-flex flex-row justify-content-end align-items-center mt-5 me-5 position-relative"
-              style="gap: 7%"
+              class="d-flex flex-row justify-content-lg-end justify-content-md-end justify-content-vs-center align-items-center mt-5 me-lg-5 me-md-5 position-relative"
+              style="gap: 12%"
             >
               <div>
                 <i
@@ -995,7 +1119,7 @@
             </div>
           </div>
         </div>
-        <div class="row swiper mySwiper1">
+        <div  class="row swiper mySwiper1">
           <div class="swiper-wrapper">
             <div
               class="swiper-slide"
@@ -1053,17 +1177,23 @@
           <div class="swiper-button-prev"></div> -->
         </div>
         <div class="row mt-3 g-0">
-          <div
-            class="col-6"
+          <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500" 
+            class="col-lg-6 col-md-6 col-sm-12 col-12"
             style="
               background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/why_choose_us_left_img.jpeg&quot;);
               background-position: 30% 5%;
               background-size: 200%;
             "
           >
-            <div class="px-5" style="margin-top: 130px">
-              <h5 style="color: #e9a132">Why Choose Us</h5>
-              <h1 class="fw-bold text-light mt-2" style="font-size: 50px">
+            <div class="px-lg-4 px-md-4 px-vs-3 px-sm-3 mt-5 pt-lg-5 pt-md-5">
+              <h5 class="fs-vs-16 fs-sm-16" style="color: #e9a132">
+                Why Choose Us
+              </h5>
+              <h1
+                class="fw-bold text-light mt-2 fs-lg-50 fs-md-50 fs-vs-33 fs-sm-33"
+              >
                 Developing a
                 <span style="color: #e9a132">design that is easy</span> to use
                 and navigate
@@ -1074,95 +1204,79 @@
                 support for businesses. Creating visual content, such as logos,
                 brochures, infographics
               </p>
-              <div class="row mt-5 pt-5 text-light">
+              <div class="row mt-5 pt-lg-3 pt-md-3 pb-vs-3 pb-sm-3 text-light">
                 <div
-                  class="col-6 mb-4 d-flex flex-row align-items-center"
+                  class="col-lg-6 col-md-6 col-sm-12 col-12 mb-4 d-flex flex-row align-items-center"
                   style="gap: 7%"
                 >
                   <div>
-                    <img
-                      src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/f-1-1.png"
-                      alt=""
-                      class="img-fluid p-3"
-                      style="
-                        height: 70px;
-                        width: 90px;
-                        background-color: #e9a132;
-                        border-radius: 10px;
-                      "
-                    />
+                    <i
+                      class="fa-solid fa-desktop fs-1 p-3 text-light"
+                      style="background-color: #e9a132; border-radius: 10px"
+                    ></i>
                   </div>
                   <div>
-                    <h4 class="fw-semibold">Digital agency services</h4>
+                    <h5 class="fw-semibold fs-lg-25">
+                      Digital agency services
+                    </h5>
                   </div>
                 </div>
                 <div
-                  class="col-6 mb-4 d-flex flex-row align-items-center"
+                  class="col-lg-6 col-md-6 col-sm-12 col-12 mb-4 d-flex flex-row align-items-center"
                   style="gap: 7%"
                 >
                   <div>
-                    <img
-                      src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/f-2-1.png"
-                      alt=""
-                      class="img-fluid p-3"
-                      style="
-                        height: 70px;
-                        width: 90px;
-                        background-color: #e9a132;
-                        border-radius: 10px;
-                      "
-                    />
+                    <i
+                      class="fa-solid fa-leaf fs-1 p-3 text-light"
+                      style="background-color: #e9a132; border-radius: 10px"
+                    ></i>
                   </div>
                   <div>
-                    <h4 class="fw-semibold">Creative digital agency</h4>
+                    <h5 class="fw-semibold fs-lg-25">
+                      Creative digital agency
+                    </h5>
                   </div>
                 </div>
                 <div
-                  class="col-6 mt-4 d-flex flex-row align-items-center"
+                  class="col-lg-6 col-md-6 col-sm-12 col-12 mt-lg-4 mt-md-4 mb-4 d-flex flex-row align-items-center"
                   style="gap: 7%"
                 >
                   <div>
-                    <img
-                      src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/f-3-1.png"
-                      alt=""
-                      class="img-fluid p-3"
-                      style="
-                        height: 70px;
-                        width: 100px;
-                        background-color: #e9a132;
-                        border-radius: 10px;
-                      "
-                    />
+                    <i
+                      class="fa-solid fa-mug-hot fs-1 p-3 text-light"
+                      style="background-color: #e9a132; border-radius: 10px"
+                    ></i>
                   </div>
                   <div>
-                    <h4 class="fw-semibold">Super expert developers</h4>
+                    <h5 class="fw-semibold fs-lg-25">
+                      Super expert developers
+                    </h5>
                   </div>
                 </div>
                 <div
-                  class="col-6 mt-4 d-flex flex-row align-items-center"
+                  class="col-lg-6 col-md-6 col-sm-12 col-12 mt-lg-4 mt-md-4 mb-4 d-flex flex-row align-items-center"
                   style="gap: 7%"
                 >
                   <div>
-                    <img
-                      src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/f-4-1.png"
-                      alt=""
-                      class="img-fluid p-3"
-                      style="
-                        height: 70px;
-                        width: 120px !important;
-                        background-color: #e9a132;
-                        border-radius: 10px;
-                      "
-                    />
+                    <i
+                      class="fa-solid fa-paint-roller fs-1 p-3 text-light"
+                      style="background-color: #e9a132; border-radius: 10px"
+                    ></i>
                   </div>
                   <div>
-                    <h4 class="fw-semibold">Creating a user friendly design</h4>
+                    <h5 class="fw-semibold fs-lg-25">
+                      reating a user friendly design
+                    </h5>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500" 
+            class="col-lg-6 col-md-6 col-sm-12 col-12 d-vs-none d-sm-none d-lg-flex d-md-flex"
+          >
             <div>
               <img
                 src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/why_choose_us_right_img.jpeg"
@@ -1173,12 +1287,14 @@
             </div>
           </div>
         </div>
-        <div class="row g-0" style="margin-top: 130px">
-          <div class="col-4">
+        <div class="row g-0 mt-5 pt-lg-5 pt-md-5">
+          <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-lg-4 col-md-4 col-sm-12 col-12">
             <div class="px-2 ms-4">
               <h5 class="orangec">Testimonial</h5>
               <h1 class="fw-bold py-2" style="font-size: 50px">
-                What They’re Saying?
+                What They're Saying?
               </h1>
               <p class="" style="font-size: 17px; color: rgb(119, 119, 119)">
                 Providing legal advice, contract drafting, compliance
@@ -1218,7 +1334,12 @@
               </div>
             </div>
           </div>
-          <div class="col-8" style="background-color: #fafafa">
+          <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500" 
+            class="col-lg-8 col-md-8 col-sm-12 col-12 mt-vs-3 mt-sm-3"
+            style="background-color: #fafafa"
+          >
             <div class="row swiper mySwiper2 my-4">
               <div class="swiper-wrapper">
                 <div class="swiper-slide py-2">
@@ -1579,27 +1700,30 @@
           </div>
         </div>
         <div class="row" style="margin-top: 130px">
-          <div class="col-12 text-center">
+          <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-12 text-center">
             <div class="text-center d-flex flex-column align-items-center">
               <h4 style="color: #e9a132">Meet Our Team Member</h4>
               <h1
-                class="text-dark mt-2 fw-bold"
-                style="font-size: 50px; width: 60%"
+                class="text-dark mt-2 fw-bold fs-lg-50 fs-md-50 fs-vs-35 px-vs-3 fs-sm-35 px-sm-3 w-lg-60 w-md-60"
               >
                 Meet the professional team behind the success
               </h1>
             </div>
           </div>
         </div>
-        <div class="container mt-5">
-          <div class="row mb-5 g-4 px-5">
-            <div class="col-4 position-relative">
+        <div class="container-fluid px-lg-5 px-md-5 mt-5">
+          <div class="row mb-5 g-4 px-lg-5 px-md-5 px-vs-3 pc-sm-3">
+            <div data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-lg-4 col-md-4 col-sm-12 col-12 position-relative">
               <div
-                class="position-absolute cardback1"
+                class="position-absolute cardback1 w-94-lg w-94-md w-93-vs w-93-sm"
                 style="
                   height: 550px;
                   z-index: -1;
-                  width: 94%;
+
                   border-radius: 50px;
                   top: 100px;
                   background-color: black;
@@ -1618,7 +1742,8 @@
                 style="
                   height: 550px;
                   width: 100%;
-                  background-size: 115%;
+                  background-size: cover;
+                  background-repeat: no-repeat;
                   background-position: 50% 10%;
                   border-radius: 50px;
                   background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/team_member_1.jpeg&quot;);
@@ -1667,13 +1792,17 @@
                 </div>
               </div>
             </div>
-            <div class="col-4 position-relative">
+            <div data-aos="fade-right"
+     data-aos-easing="linear"
+     data-aos-duration="1500" 
+              class="col-lg-4 col-md-4 col-sm-12 col-12 margin-top-vs-150 margin-top-sm-150 position-relative"
+            >
               <div
-                class="position-absolute cardback1"
+                class="position-absolute cardback1 w-94-lg w-94-md w-93-vs w-93-sm"
                 style="
                   height: 550px;
                   z-index: -1;
-                  width: 94%;
+
                   border-radius: 50px;
                   top: 100px;
                   background-color: black;
@@ -1692,7 +1821,8 @@
                 style="
                   height: 550px;
                   width: 100%;
-                  background-size: 115%;
+                  background-size: cover;
+                  background-repeat: no-repeat;
                   background-position: 50% 10%;
                   border-radius: 50px;
                   background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/team_member_2.jpeg&quot;);
@@ -1741,13 +1871,17 @@
                 </div>
               </div>
             </div>
-            <div class="col-4 position-relative">
+            <div data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="1500" 
+              class="col-lg-4 col-md-4 col-sm-12 col-12 margin-top-vs-150 margin-top-sm-150 position-relative"
+            >
               <div
-                class="position-absolute cardback1"
+                class="position-absolute cardback1 w-94-lg w-94-md w-93-vs w-93-sm"
                 style="
                   height: 550px;
                   z-index: -1;
-                  width: 94%;
+
                   border-radius: 50px;
                   top: 100px;
                   background-color: black;
@@ -1766,7 +1900,8 @@
                 style="
                   height: 550px;
                   width: 100%;
-                  background-size: 115%;
+                  background-size: cover;
+                  background-repeat: no-repeat;
                   background-position: 50% 10%;
                   border-radius: 50px;
                   background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/09/team_member_3.jpeg&quot;);
@@ -1818,19 +1953,26 @@
           </div>
         </div>
         <div class="row" style="margin-top: 230px">
-          <div
-            class="col-12 position-relative overflow-hidden"
-            style="background-color: black; padding-bottom: 100px"
+          <div 
+            class="col-12 position-relative pb-lg-5 pb-md-5 overflow-hidden"
+            style="background-color: black;"
           >
-            <div class="row g-5 px-4">
-              <div class="col-5">
-                <div class="px-5" style="margin-top: 130px">
-                  <h5 style="color: #e9a132">Contact With Us</h5>
+            <div class="row g-5 px-lg-4 px-md-4">
+              <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-lg-5 col-md-5 col-sm-12 col-12">
+                <div
+                  class="px-lg-5 px-md-5 px-vs-3 px-sm-3"
+                  style="margin-top: 130px"
+                >
+                  <h5 class="fs-vs-17 fs-sm-17" style="color: #e9a132">
+                    Contact With Us
+                  </h5>
                   <h1
-                    class="fw-bold text-light mt-2"
-                    style="font-size: 45px; white-space: nowrap"
+                    class="fw-bold text-light mt-2 fs-lg-45 fs-md-45 fs-vs-35 fs-sm-35"
+                    style="white-space: nowrap"
                   >
-                    Let’s Work Together?
+                    Let's Work Together?
                   </h1>
                   <p class="text-light mt-4" style="font-size: 16px">
                     Providing legal advice, contract drafting, compliance
@@ -1839,85 +1981,82 @@
                     as logos, brochures, infographics
                   </p>
                   <div
-                    class="d-flex flex-row align-items-center mt-5"
+                    class="d-flex flex-row align-items-lg-center align-items-md-center mt-5"
                     style="gap: 5%"
                   >
                     <div>
-                      <img
-                        src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/1-1-1.png"
-                        alt=""
-                        class="p-4 img-fluid"
-                        style="
-                          background-color: #e9a132;
-                          height: 90px;
-                          border-radius: 15px;
-                        "
-                        srcset=""
-                      />
+                      <i
+                        class="fa-solid fa-phone-volume fs-1 text-light d-flex flex-row justify-content-center align-items-center"
+                        style=" background-color: #e9a132;
+                          border-radius: 10px;
+                          width: 70px;
+                          height: 70px;"
+                      ></i>
                     </div>
                     <div>
                       <h6 style="color: #e9a132">Have Any Question?</h6>
-                      <h5 class="fw-semibold text-light mt-3">
+                      <h5
+                        class="fw-semibold text-light mt-lg-3 mt-md-3 mt-vs-1 mt-sm-1"
+                      >
                         + 070 4531 9507
                       </h5>
                     </div>
                   </div>
                   <div
-                    class="d-flex flex-row align-items-center mt-3"
+                    class="d-flex flex-row align-items-lg-center align-items-md-center mt-lg-3 mt-md-3 mt-vs-5 mt-sm-5"
                     style="gap: 5%"
                   >
                     <div>
-                      <img
-                        src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/2-1-1.png"
-                        alt=""
-                        class="p-4 img-fluid"
-                        style="
-                          background-color: #e9a132;
-                          height: 90px;
-                          border-radius: 15px;
-                        "
-                        srcset=""
-                      />
+                      <i
+                        class="fa-solid fa-envelope fs-1 text-light d-flex flex-row justify-content-center align-items-center"
+                        style=" background-color: #e9a132;
+                          border-radius: 10px;
+                          width: 70px;
+                          height: 70px;"
+                      ></i>
                     </div>
                     <div>
                       <h6 style="color: #e9a132">Send Email</h6>
-                      <h5 class="fw-semibold text-light mt-3">
+                      <h5
+                        class="fw-semibold text-light mt-lg-3 mt-md-3 mt-vs-1 mt-sm-1"
+                      >
                         bizmax@laralink.com
                       </h5>
                     </div>
                   </div>
                   <div
-                    class="d-flex flex-row align-items-center mt-3"
+                    class="d-flex flex-row align-items-lg-center align-items-md-center mt-lg-3 mt-md-3 mt-vs-5 mt-sm-5"
                     style="gap: 5%"
                   >
                     <div>
-                      <img
-                        src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/3-1-1.png"
-                        alt=""
-                        class="p-4 img-fluid"
+                      <i
+                        class="fa-solid fa-location-dot fs-1 text-light d-flex flex-row justify-content-center align-items-center"
                         style="
                           background-color: #e9a132;
-                          height: 90px;
-                          border-radius: 15px;
+                          border-radius: 10px;
+                          width: 70px;
+                          height: 70px;
                         "
-                        srcset=""
-                      />
+                      ></i>
                     </div>
                     <div>
                       <h6 style="color: #e9a132">Address</h6>
-                      <h5 class="fw-semibold text-light mt-3">
+                      <h5
+                        class="fw-semibold text-light mt-lg-3 mt-md-3 mt-vs-1 mt-sm-1"
+                      >
                         Yewtree Cottage, Kings Pyon, HR4 8PZ
                       </h5>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-6 ms-5">
+              <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-lg-6 col-md-6 col-sm-12 col-12 ms-lg-5 ms-md-5 pb-vs-5 pb-sm-5 d-vs-flex flex-vs-row justify-content-vs-center d-sm-flex flex-sm-row justify-content-sm-center">
                 <div
-                  class="bg-light p-4 d-flex flex-column align-items-center text-center"
+                  class="bg-light p-4 d-flex flex-column align-items-center text-center w-lg-70 w-md-70 w-vs-95 w-sm-95"
                   style="
-                    height: 560px;
-                    width: 510px;
+                    
                     margin-top: 130px;
                     border-radius: 30px;
                   "
@@ -1962,7 +2101,7 @@
                   </div>
                 </div>
                 <div
-                  class="position-absolute"
+                  class="position-absolute d-vs-none d-sm-none d-lg-flex d-md-flex"
                   style="z-index: 4; bottom: -4%; right: -2%"
                 >
                   <img
@@ -1982,12 +2121,14 @@
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row" style="margin-top: 50px">
-            <div class="col-12">
-              <div class="">
-                <div class="row swiper mySwiper3 my-4">
-                  <div class="swiper-wrapper">
+        
+          <div class="row mt-5">
+            <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-12">
+              <div class="mt-lg-5 mt-md-5">
+                <div class="row swiper mySwiper3 my-4 ms-vs-5 px-vs-5 ms-sm-5 px-sm-5">
+                  <div class="swiper-wrapper ">
                     <div class="swiper-slide">
                       <div>
                         <img
@@ -2081,19 +2222,23 @@
               </div>
             </div>
           </div>
-          <div class="row" style="margin-top: 70px">
-            <div class="col-12">
+          <div class="row mt-5">
+            <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-12 mt-lg-4 mt-md-4">
               <div class="text-center">
                 <h5 class="orangec">Meet Our Team Member</h5>
-                <h1 class="fw-bold" style="font-size: 50px">
+                <h1 class="fw-bold fs-lg-50 fs-md-50 fs-vs-35" >
                   Find Out Latest News <br />
                   and Articles
                 </h1>
               </div>
             </div>
             <div class="col-12">
-              <div class="row mt-5">
-                <div class="col-4">
+              <div class="row mt-5 px-vs-3 px-sm-3 px-lg-4 px-md-4">
+                <div data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-lg-4 col-md-4 col-sm-12 col-12">
                   <div
                     class="position-relative"
                     style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
@@ -2113,7 +2258,8 @@
                           background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/post_1-2-355x345.jpeg&quot;);
                           height: 405px;
                           width: 100%;
-                          background-size: 100%;
+                          background-size: cover;
+                          background-repeat: no-repeat;
                         "
                       ></div>
                     </div>
@@ -2171,7 +2317,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4">
+                <div data-aos="fade-right"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-lg-4 col-md-4 col-sm-12 col-12 mt-vs-5 mt-sm-5 mt-lg-0 mt-md-0">
                   <div
                     class="position-relative"
                     style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
@@ -2191,11 +2339,12 @@
                           background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/post_7-2-355x345.jpeg&quot;);
                           height: 405px;
                           width: 100%;
-                          background-size: 100%;
+                          background-size: cover;
+                          background-repeat: no-repeat;
                         "
                       ></div>
                     </div>
-                   <div class="px-4">
+                    <div class="px-4">
                       <div class="d-flex flex-row justify-content-between mt-3">
                         <div class="d-flex flex-row" style="font-size: 14px">
                           <i class="fa-solid fa-user orangec mt-1"></i>
@@ -2249,7 +2398,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4">
+                <div data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-lg-4 col-md-4 col-sm-12 col-12 mt-vs-5 mt-sm-5 mt-lg-0 mt-md-0">
                   <div
                     class="position-relative"
                     style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
@@ -2269,11 +2420,12 @@
                           background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/post_3-2-355x345.jpeg&quot;);
                           height: 405px;
                           width: 100%;
-                          background-size: 100%;
+                          background-size: cover;
+                          background-repeat: no-repeat;
                         "
                       ></div>
                     </div>
-                     <div class="px-4">
+                    <div class="px-4">
                       <div class="d-flex flex-row justify-content-between mt-3">
                         <div class="d-flex flex-row" style="font-size: 14px">
                           <i class="fa-solid fa-user orangec mt-1"></i>
@@ -2330,8 +2482,7 @@
               </div>
             </div>
           </div>
-          <div class="row" style="margin-top: 70px"></div>
-        </div>
+        
         <div
           class="row"
           style="
@@ -2339,7 +2490,237 @@
             background-image: url(&quot;https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/footer_bg-2.jpeg&quot;);
             background-size: cover;
           "
-        ></div>
+        >
+          <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-12">
+         
+              <div
+                class="row d-flex flex-row justify-content-between px-lg-5 px-md-5 px-vs-3 px-sm-3 my-2 py-5"
+              >
+                <div class="col-lg-2 col-md-2 col-vs-12 col-12">
+                  <h6 class="orangec">Have Any Question?</h6>
+                  <h5 class="fw-semibold text-light">+ 070 4531 9507</h5>
+                </div>
+                <div class="col-lg-2 col-md-2 col-vs-12 col-12 d-vs-none d-sm-none d-lg-flex d-md-flex">
+                  <a
+                    class="navbar-brand fs-3 me-5 fw-bolder"
+                    style="height: 50px; width: 100px"
+                    ><img
+                      src="https://bizmax-wp.laralink.com/wp-content/uploads/2023/07/logo-2.svg"
+                      alt=""
+                      srcset=""
+                  /></a>
+                </div>
+                <div class="col-lg-2 col-md-2 col-vs-12 col-12 mt-vs-4 mt-sm-4">
+                  <h6 class="orangec">Send Email</h6>
+                  <h5 class="fw-semibold text-light">bizmax@laralink.com</h5>
+                </div>
+              </div>
+              <hr style="color: #a2a2a2; background-color: #a2a2a2" />
+            
+            <div class="row g-4 mt-3 px-lg-5 px-md-5 px-vs-3 px-sm-3">
+              <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-lg-4 col-md-4 col-sm-12 col-12">
+                <div class="px-2">
+                  <div>
+                    <p class="text-light">
+                      I've been using [business name] for the past year and I'm
+                      so glad I did. Their products and services are top-notch
+                      and their customer service is amazing. I would highly
+                      recommend them to anyone
+                    </p>
+                  </div>
+                  <div class="d-flex flex-row text-light mt-4" style="gap: 3%">
+                    <div>
+                      <i
+                        class="fa-brands fa-facebook-f fs-5 text-light orangebg"
+                        style="
+                          display: grid;
+                          place-items: center;
+                          background-color: black;
+                          border: 1px solid #a2a2a2;
+                          border-radius: 50%;
+                          height: 40px;
+                          width: 40px;
+                        "
+                      ></i>
+                    </div>
+                    <div>
+                      <i
+                        class="fa-brands fa-twitter fs-5 text-light orangebg"
+                        style="
+                          display: grid;
+                          place-items: center;
+                          background-color: black;
+                          border: 1px solid #a2a2a2;
+                          border-radius: 50%;
+                          height: 40px;
+                          width: 40px;
+                        "
+                      ></i>
+                    </div>
+                    <div>
+                      <i
+                        class="fa-brands fa-linkedin fs-5 text-light orangebg"
+                        style="
+                          display: grid;
+                          place-items: center;
+                          background-color: black;
+                          border: 1px solid #a2a2a2;
+                          border-radius: 50%;
+                          height: 40px;
+                          width: 40px;
+                        "
+                      ></i>
+                    </div>
+                    <div>
+                      <i
+                        class="fa-brands fa-youtube fs-5 text-light orangebg"
+                        style="
+                          display: grid;
+                          place-items: center;
+                          background-color: black;
+                          border: 1px solid #a2a2a2;
+                          border-radius: 50%;
+                          height: 40px;
+                          width: 40px;
+                        "
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-lg-4 col-md-4 col-sm-12 col-12 ">
+                <div class="ms-lg-5 ms-md-5 mt-vs-5 mt-sm-5 px-vs-4 px-sm-4">
+                  <div class="row">
+                    <div class="col-12">
+                      <h4 class="text-light fw-bold">Explore</h4>
+                    </div>
+                    <div class="col-6 ">
+                      <div class="d-flex flex-column">
+                        <a
+                          class="mt-3 fw-medium text-decoration-none orangech text-light"
+                          href="#"
+                        >
+                          About</a
+                        >
+
+                        <a
+                          class="mt-3 fw-medium text-decoration-none orangech text-light"
+                          href="#"
+                        >
+                          Services</a
+                        >
+
+                        <a
+                          class="mt-3 fw-medium text-decoration-none orangech text-light"
+                          href="#"
+                        >
+                          Pricing Page</a
+                        >
+
+                        <a
+                          class="mt-3 fw-medium text-decoration-none orangech text-light"
+                          href="#"
+                        >
+                          Blog</a
+                        >
+
+                        <a
+                          class="mt-3 fw-medium text-decoration-none orangech text-light"
+                          href="#"
+                        >
+                          Contact</a
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex flex-column">
+                        <a
+                          class="mt-3 fw-medium text-decoration-none orangech text-light"
+                          href="#"
+                        >
+                          Portfolio</a
+                        >
+
+                        <a
+                          class="mt-3 fw-medium text-decoration-none orangech text-light"
+                          href="#"
+                        >
+                          Support</a
+                        >
+
+                        <a
+                          class="mt-3 fw-medium text-decoration-none orangech text-light"
+                          href="#"
+                        >
+                          New Projects</a
+                        >
+
+                        <a
+                          class="mt-3 fw-medium text-decoration-none orangech text-light"
+                          href="#"
+                        >
+                          Privacy Policy</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="px-lg-5 px-md-5 px-vs-3 px-sm-3 mt-vs-5 mt-sm-5">
+                  <div>
+                    <h4 class="text-light fw-bold">Newsletter</h4>
+                  </div>
+                  <div class="mt-4">
+                    <p class="text-light">
+                      At vero eos et accusamus et iusto odio as part dignissimos
+                      ducimus qui blandit.
+                    </p>
+                  </div>
+                  <div
+                    class="mt-5 d-flex flex-row justify-content-center position-relative"
+                  >
+                    <input
+                      type="text"
+                      class="form-control py-3 ps-3 pe-5 text-light"
+                      style="background-color: #343434; border: none"
+                    />
+                    <button
+                      class="btn text-light mt-2 fs-5 me-1 fw-semibold px-2 py-1 position-absolute end-0"
+                      style="background-color: #e9a132"
+                    >
+                      Go
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row my-5">
+              <div data-aos="zoom-in-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"  class="col-lg-12">
+                <div class="my-2">
+                  <h6
+                    class="text-light text-center fw-normal"
+                    style="color: #a2a2a2 !important"
+                  >
+                    Copyright © 2024
+                    <span style="color: #e9a132">bizmax</span>. All rights
+                    reserved.
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script
@@ -2348,7 +2729,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -2365,8 +2749,28 @@
           prevEl: ".swiper-button-prev",
         },
         autoplay: {
-          delay: 2500,
+          delay: 2000,
           disableOnInteraction: false,
+        },
+        breakpoints: {
+          // VS / SM screens (up to 767px)
+          0: {
+            // from 0px width
+            slidesPerView: 1,
+          },
+          576: {
+            // sm breakpoint (>=576px)
+            slidesPerView: 1,
+          },
+          768: {
+            // md breakpoint (>=768px)
+            slidesPerView: 4,
+          },
+          992: {
+            // lg breakpoint (>=992px)
+            slidesPerView: 4,
+          },
+          // You can also add xl (>=1200px) if needed
         },
       });
       var swiper2 = new Swiper(".mySwiper2", {
@@ -2382,8 +2786,28 @@
           prevEl: ".swiper-button-prev",
         },
         autoplay: {
-          delay: 2500,
+          delay: 2000,
           disableOnInteraction: false,
+        },
+        breakpoints: {
+          // VS / SM screens (up to 767px)
+          0: {
+            // from 0px width
+            slidesPerView: 1,
+          },
+          576: {
+            // sm breakpoint (>=576px)
+            slidesPerView: 1,
+          },
+          768: {
+            // md breakpoint (>=768px)
+            slidesPerView: 3,
+          },
+          992: {
+            // lg breakpoint (>=992px)
+            slidesPerView: 3,
+          },
+          // You can also add xl (>=1200px) if needed
         },
       });
       var swiper3 = new Swiper(".mySwiper3", {
@@ -2399,8 +2823,30 @@
           prevEl: ".swiper-button-prev",
         },
         autoplay: {
-          delay: 2500,
+          delay: 1800,
           disableOnInteraction: false,
+        },
+         breakpoints: {
+          // VS / SM screens (up to 767px)
+          0: {
+            // from 0px width
+            slidesPerView: 1,
+            
+          },
+          576: {
+            // sm breakpoint (>=576px)
+            slidesPerView: 1,
+            
+          },
+          768: {
+            // md breakpoint (>=768px)
+            slidesPerView: 5,
+          },
+          992: {
+            // lg breakpoint (>=992px)
+            slidesPerView: 5,
+          },
+          // You can also add xl (>=1200px) if needed
         },
       });
     </script>

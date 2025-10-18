@@ -1,0 +1,65 @@
+@media (min-width: 10px) and (max-width: 575.9px) {
+  .height-vs-900 {
+    height: 900px !important;
+  }
+  .imgabmedal-vs {
+    top: 250px !important; right: 5px !important
+  }
+  .shakee-vs {
+    bottom: -120px !important; transform: translateX(-150px) !important;
+  }
+  .margin-top{
+    margin-top: 200px !important;
+  }
+  .w-93-vs{
+    width: 93%;
+  }
+  .margin-top-vs-150{
+    margin-top: 150px !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.9px) {
+  .height-sm-900 {
+    height: 900px !important;
+  }
+  .imgabmedal-sm {
+    top: 250px !important; right: 5px !important
+  }
+  .shakee-sm {
+    bottom: -120px !important; transform: translateX(-150px) !important;
+  }
+  .w-93-sm{
+    width: 93%;
+  }
+  .margin-top-sm-150{
+    margin-top: 150px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.9px) {
+  .shakee-md {
+    bottom: -10px !important;
+    left: 200px !important;
+  }
+  .imgabmedal-md {
+    top: 300px !important;
+    right: 70px !important;
+  }
+  .w-94-md{
+    width: 94%;
+  }
+}
+
+@media (min-width: 992px) {
+  .shakee-lg {
+    bottom: -10px !important;
+    left: 200px !important;
+  }
+  .imgabmedal-lg {
+    top: 300px !important;
+    right: 70px !important;
+  }
+  .w-94-lg{
+    width: 94%;
+  }
+}
